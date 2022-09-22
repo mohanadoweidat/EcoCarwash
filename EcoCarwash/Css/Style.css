@@ -1,0 +1,38 @@
+﻿#container {
+    /*background: rgb(167,246,255);
+    background: linear-gradient(90deg, rgba(167,246,255,1) 0%, rgba(162,206,255,0.8071603641456583) 50%, rgba(0,121,255,1) 100%);*/
+}
+
+
+
+
+#navbar {
+    background-color: #e3f2fd;
+     
+}
+
+#navElements {
+    color: black;
+}
+
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+     
+   
+}
+
+.space{
+    padding:10px;
+}
+
+ 
+ 
+
+
+
+
