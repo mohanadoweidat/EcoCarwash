@@ -3,18 +3,124 @@
     background: linear-gradient(90deg, rgba(167,246,255,1) 0%, rgba(162,206,255,0.8071603641456583) 50%, rgba(0,121,255,1) 100%);*/
 }
 
+* {
+    font-family: "Nunito",sans-serif;
+}
 
+body, html {
+    height: 100%;
+    margin: 0;
+}
 
+ 
+/* Navbar */
 
 #navbar {
     background-color: #e3f2fd;
      
 }
 
-#navElements {
+
+.navbar-brand{
+    color:red;
+}
+/* Navbar --> Company name --> homepage */
+#brandA {
+    background-color: #6cb2e8 !important;
+    padding: 10px;
+    border-radius: 29px;
     color: black;
+    font-weight: bold;
+}
+    /* Navbar --> Company name --> homepage ---> :hover */
+  #brandA:hover {
+        background-color: #b7daf5 !important;
+        border-radius: 29px;
+        
+  }
+
+
+
+
+
+/* Navbar --> navitems --> a  */
+#centerAll > li > a {
+    color: black;
+    font-weight: bold;
+    padding: 10px;
 }
 
+
+
+ 
+/* Navbar --> navitems --> Active */
+#centerAll > li > a:active {
+    background-color: #6cb2e8 !important;
+}
+
+ 
+/* Navbar --> navitems --> a:hover  */
+    #centerAll > li > a:hover {
+        background-color: #b7daf5 !important;
+        border-radius: 29px;
+    }
+
+ 
+
+
+
+#centerAll {
+    margin: auto;
+}
+
+ 
+/* Header image */
+.bg {
+    /* The image used */
+    background-image: url("../Images/bg.jpg");
+    /* Full height */
+    height: 50%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#wlcp{
+    font-size:50px;
+}
+
+.centered {
+    position: absolute;
+    left: 50%;
+    bottom: 60%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+     
+    color: #fff;
+    text-shadow: 0 0 5px rgb(0 0 0 / 30%);
+    font-family: "Nunito",sans-serif;
+    line-height:30px;
+    font-weight:bold;
+    
+}
+
+
+
+/*Logo*/
+#l {
+    width: 55%;
+    padding: 10px;
+    height: 50%;
+    color: #e0dfdc;
+    letter-spacing: .1em;
+    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0,0,0,0.9);
+}
+
+
+
+/* Cards */
 
 .cards {
     display: flex;
@@ -22,13 +128,36 @@
     align-items: center;
     text-align: center;
     min-height: 100vh;
-     
    
 }
 
-.space{
-    padding:10px;
+
+/* Media query */
+
+ 
+/* If the screen size is 600px wide or less, hide the element */
+@media screen and (max-width: 1000px) {
+    #wlcp {
+        font-size: 25px;
+    }
 }
+
+
+/* If the screen size is 600px wide or less, hide the element */
+@media screen and (max-width: 450px) {
+    #wlcp {
+        font-size: 14px;
+        margin: -150px 0px 0px 0px;
+    }
+
+    #infop{
+        font-size:15px;
+    }
+}
+ 
+
+ 
+
 
  
  

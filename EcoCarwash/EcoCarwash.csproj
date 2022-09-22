@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Css\Style.css" />
     <Content Include="Images\bed.png" />
+    <Content Include="Images\bg.jpg" />
     <Content Include="Images\car.png" />
     <Content Include="Images\carpet.png" />
     <Content Include="Images\sofa.png" />
