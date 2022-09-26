@@ -1,58 +1,53 @@
-﻿#container {
-    /*background: rgb(167,246,255);
-    background: linear-gradient(90deg, rgba(167,246,255,1) 0%, rgba(162,206,255,0.8071603641456583) 50%, rgba(0,121,255,1) 100%);*/
-}
+﻿/*******************************/
+/********** General CSS **********/
+/*******************************/
+
 
 * {
     font-family: "Nunito",sans-serif;
+    box-sizing: border-box;
 }
+
 
 body, html {
     height: 100%;
     margin: 0;
 }
 
- 
-/* Navbar */
+#container {
+    /*background: rgb(167,246,255);
+    background: linear-gradient(90deg, rgba(167,246,255,1) 0%, rgba(162,206,255,0.8071603641456583) 50%, rgba(0,121,255,1) 100%);*/
+}
+
+  
+hr {
+    background-color: #e3f2fd;
+    margin:10px;
+    padding:10px;
+}
+
+
+/*******************************/
+/********** Navbar CSS **********/
+/*******************************/
 
 #navbar {
     background-color: #e3f2fd;
-     
 }
 
 
-.navbar-brand{
-    color:red;
-}
-/* Navbar --> Company name --> homepage */
-#brandA {
-    background-color: #6cb2e8 !important;
-    padding: 10px;
-    border-radius: 29px;
-    color: black;
-    font-weight: bold;
-}
-    /* Navbar --> Company name --> homepage ---> :hover */
-  #brandA:hover {
-        background-color: #b7daf5 !important;
-        border-radius: 29px;
-        
-  }
 
-
-
-
-
+ 
 /* Navbar --> navitems --> a  */
 #centerAll > li > a {
     color: black;
     font-weight: bold;
     padding: 10px;
+     
+     
 }
 
-
-
- 
+  
 /* Navbar --> navitems --> Active */
 #centerAll > li > a:active {
     background-color: #6cb2e8 !important;
@@ -65,13 +60,22 @@ body, html {
         border-radius: 29px;
     }
 
- 
 
-
-
+/* Navbar --> navitems --> Center  */
 #centerAll {
     margin: auto;
 }
+
+.activeItem {
+    background-color: #b7daf5 !important;
+    border-radius: 29px;
+}
+
+ 
+
+/*******************************/
+/********** Header CSS **********/
+/*******************************/
 
  
 /* Header image */
@@ -86,10 +90,33 @@ body, html {
     background-size: cover;
 }
 
-
-#wlcp{
-    font-size:50px;
+ 
+.bg-aboutUs {
+    /* The image used */
+    background-color: #b7daf5; 
+    /* Full height */
+    height: 20%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+ 
+#wlcp{
+    font-size:55px;
+}
+
+
+#wlcp-aboutUs {
+    font-size: 55px;
+}
+
+#infop {
+    font-size: 23px;
+}
+
+ 
 
 .centered {
     position: absolute;
@@ -97,14 +124,44 @@ body, html {
     bottom: 60%;
     transform: translate(-50%, -50%);
     text-align: center;
-     
     color: #fff;
     text-shadow: 0 0 5px rgb(0 0 0 / 30%);
     font-family: "Nunito",sans-serif;
-    line-height:30px;
-    font-weight:bold;
-    
+    line-height: 30px;
+    font-weight: bold;
 }
+
+
+.centered-aboutUs {
+    position: absolute;
+    top:14%;
+    left: 50%;
+    bottom: 82%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 5px rgb(0 0 0 / 30%);
+    font-family: "Nunito",sans-serif;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+
+.headerSvg{
+    margin-bottom:7px;
+}
+/*******************************/
+/********** Footer CSS **********/
+/*******************************/
+.footer-color {
+    background-color: #e3f2fd;
+}
+
+
+ 
+/*******************************/
+/********** Index CSS **********/
+/*******************************/
 
 
 
@@ -113,16 +170,15 @@ body, html {
     width: 55%;
     padding: 10px;
     height: 50%;
-    color: #e0dfdc;
+    color: #FFFFFF;
     letter-spacing: .1em;
-    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0,0,0,0.9);
+    font-weight: bolder !important;
+    border-radius:40px;
 }
 
-
-
+ 
 /* Cards */
-
-.cards {
+ .cards {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,29 +186,582 @@ body, html {
     min-height: 100vh;
    
 }
+  
 
 
-/* Media query */
+/*******************************/
+/********** Index ---> Progress bar CSS **********/
+/*******************************/
+
+/**Prograss bar*/
+#heading {
+    text-transform: uppercase;
+    color: #4476fb;
+    font-weight: normal;
+}
 
  
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+    #msform fieldset {
+        background: white;
+        border: 0 none;
+        border-radius: 0.5rem;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        padding-bottom: 20px;
+        /*stacking fieldsets above each other*/
+        position: relative;
+    }
+
+.form-card {
+    text-align: left;
+   
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+ 
+
+/*Next Buttons*/
+#msform .action-button {
+    width: 100px;
+    background: #4476fb;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 0px 10px 5px;
+    float: right;
+}
+
+    #msform .action-button:hover, #msform .action-button:focus {
+        background-color: #1f4abe;
+    }
+
+/*Previous Buttons*/
+#msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px 10px 0px;
+    float: right;
+}
+
+    #msform .action-button-previous:hover, #msform .action-button-previous:focus {
+        background-color: #000000;
+    }
+
+/*The background card*/
+.card {
+    z-index: 0;
+    border: none;
+    position: relative;
+}
+
+p{
+    font-weight:bold;
+}
+
+/*FieldSet headings*/
+.fs-title {
+    font-size: 25px;
+    color: #4476fb;
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-align: left;
+}
+
+.blue-text {
+    color: #4476fb;
+    font-weight: normal;
+}
+
+/*Step Count*/
+.steps {
+    font-size: 25px;
+    color: gray;
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: right;
+}
+
+ 
+
+/*Icon progressbar*/
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey;
+}
+
+    #progressbar .active {
+        color: #4476fb;
+    }
+
+    #progressbar li {
+        list-style-type: none;
+        font-size: 15px;
+        width: 25%;
+        float: left;
+        position: relative;
+        font-weight: 400;
+    }
+
+    /*Icons in the ProgressBar*/
+    #progressbar #service:before {
+        font-family: FontAwesome;
+        content: "\f552";
+    }
+
+    #progressbar #timeBooking:before {
+        font-family: FontAwesome;
+        content: "\f271";
+    }
+
+    #progressbar #information:before {
+        font-family: FontAwesome;
+        content: "\f14b";
+    }
+
+    #progressbar #confirm:before {
+        font-family: FontAwesome;
+        content: "\f00c";
+    }
+
+    /*Icon ProgressBar before any progress*/
+    #progressbar li:before {
+        width: 50px;
+        height: 50px;
+        line-height: 45px;
+        display: block;
+        font-size: 20px;
+        color: #ffffff;
+        background: lightgray;
+        border-radius: 50%;
+        margin: 0 auto 10px auto;
+        padding: 2px;
+    }
+
+    /*ProgressBar connectors*/
+    #progressbar li:after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: lightgray;
+        position: absolute;
+        left: 0;
+        top: 25px;
+        z-index: -1;
+    }
+
+    /*Color number of the step and the connector before it*/
+    #progressbar li.active:before, #progressbar li.active:after {
+        background: #4476fb;
+    }
+
+/*Animated Progress Bar*/
+.progress {
+    height: 20px;
+}
+
+.progress-bar {
+    background-color: #4476fb;
+}
+
+/*Fit image in bootstrap div*/
+.fit-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/*Booking button in progress bar*/
+.bookingBtn {
+    width: 100px;
+    background: #4476fb;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 0px 10px 5px;
+    text-align:center;
+}
+
+    .bookingBtn:hover {
+        background-color: #1f4abe;
+    }
+
+/***************************************************************/
+
+
+/*******************************/
+/********** About CSS **********/
+/*******************************/
+
+    .section-header {
+        position: relative;
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto 45px auto;
+    }
+
+
+    .section-header p {
+        display: inline-block;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        position: relative;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color:  #4476fb;
+    }
+
+
+      .section-header p::after {
+       position: absolute;
+       content: "";
+       width: 50%;
+       height: 2px;
+       left: 25%;
+       bottom: 0;
+       background: #b7daf5;
+      }
+ 
+    .section-header h2 {
+       margin: 0;
+       font-size: 45px;
+       font-weight: 700;
+       text-transform: capitalize;
+    }
+
+
+         
+    .about .section-header {
+        margin-bottom: 30px;
+        margin-left: 0;
+    }
+
+    .about .about-img img {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 30px;
+    }
+
+
+    .about .about-content {
+        margin-bottom: 30px;
+    }
+
+
+   .about .about-content ul {
+       margin: 0;
+       padding: 0;
+       list-style: none;
+       margin-bottom: 25px;
+   }
+
+
+   .about .about-content ul li {
+          margin-bottom: 5px;
+   }
+
+    .about .about-content ul li i {
+       margin-right: 8px;
+        color: #4476fb;
+    }
+
+
+
+/*Booking button in progress bar*/
+.aboutBtn {
+    width: 100px;
+    background:  #1f4abe;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 0px 10px 5px;
+    text-align: center;
+    text-decoration:none;
+}
+
+    .aboutBtn:hover {
+        background-color: #4476fb;
+    }
+
+
+
+
+/*******************************/
+/********** About us ---> Iamge gallery --> CSS **********/
+/*******************************/
+ 
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+  
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+ 
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+
+/*******************************/
+/********** Contact us CSS **********/
+/*******************************/
+
+.contact {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
+
+    .contact .contact-info {
+        width: 100%;
+        margin-bottom: 45px;
+        padding: 35px 30px 10px 30px;
+        border-radius: 5px;
+        background: #b7daf5;
+         
+    }
+
+        .contact .contact-info h2 {
+            color: black;
+            font-size: 25px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+    .contact .contact-info-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 30px;
+
+    }
+
+    .contact .contact-info-icon {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+        border-radius: 50px;
+
+    }
+
+        .contact .contact-info-icon i {
+            margin: 0;
+            color: #202C45;
+            font-size: 16px;
+        }
+
+    .contact .contact-info-text {
+        padding-left: 20px;
+    }
+
+        .contact .contact-info-text h3 {
+            margin: 0 0 5px 0;
+            color: black;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .contact .contact-info-text p {
+            margin: 0;
+            color: black; /* #1f4abe*/
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+    .contact .contact-form {
+        position: relative;
+        width: 100%;
+        margin-bottom: 45px;
+    }
+
+        .contact .contact-form input {
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #202C45;
+        }
+
+        .contact .contact-form textarea {
+            height: 125px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            border: 1px solid #202C45;
+        }
+
+    .contact .help-block ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .contact iframe {
+        width: 100%;
+        height: 400px;
+        border-radius: 5px;
+    }
+
+
+    /**Icon in input field*/
+    .contact-form i{
+        position:absolute;
+    }
+
+    .input-icons {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .icon {
+        padding: 10px;
+        min-width: 40px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        text-align:center
+    }
+
+
+      
+
+/*******************************/
+/********** Media query **********/
+/*******************************/
+
+  
 /* If the screen size is 600px wide or less, hide the element */
 @media screen and (max-width: 1000px) {
     #wlcp {
         font-size: 25px;
     }
+
+
+    .centered-aboutUs {
+        position: absolute;
+        top: 12%;
+        left: 50%;
+        bottom: 85%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+        text-shadow: 0 0 5px rgb(0 0 0 / 30%);
+        font-family: "Nunito",sans-serif;
+        line-height: 30px;
+        font-weight: bold;
+    }
+
 }
 
 
 /* If the screen size is 600px wide or less, hide the element */
 @media screen and (max-width: 450px) {
     #wlcp {
-        font-size: 14px;
+        font-size: 20px;
         margin: -150px 0px 0px 0px;
     }
 
     #infop{
-        font-size:15px;
+        font-size:12px;
     }
+
+
+    .centered-aboutUs {
+        position: absolute;
+        top: 12%;
+        left: 50%;
+        bottom: 80%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+        text-shadow: 0 0 5px rgb(0 0 0 / 30%);
+        font-family: "Nunito",sans-serif;
+        line-height: 30px;
+        font-weight: bold;
+    }
+
+
+
+    #wlcp-aboutUs {
+        font-size: 15px;
+        margin: 20px 0px 0px 0px;
+    }
+     
+     
+
+    
 }
  
 

@@ -1,0 +1,131 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMasterPage.master.cs" Inherits="EcoCarwash.AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+     <title></title>
+     <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+     <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+
+     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- CSS Style -->
+    <link href="Css/AdminStyle.css" rel="stylesheet" />
+
+      <!-- Js -->
+    <script src="Js/AdminJS.js"></script>
+
+   
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+
+
+              <div class="sidebar">
+    <div class="logo-details">
+      
+        <i class='bx bxs-home-heart icon'></i>
+        <div class="logo_name">S&L-Biltvätt
+        </div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="index.aspx">
+         <i class='bx bx-home-heart'></i>
+          <span class="links_name">Startsidan</span>
+        </a>
+         <span class="tooltip">Startsidan</span>
+      </li>
+      <li>
+        <a href="Booking.aspx">
+         <i class='bx bx-cart-alt'></i>
+          <span class="links_name">Bokningar</span>
+        </a>
+         <span class="tooltip">Bokningar</span>
+      </li>
+      <li>
+       <a href="addImage.aspx">
+         <i class='bx bx-image-add' ></i>
+         <span class="links_name">Lägg till en bild</span>
+       </a>
+       <span class="tooltip">Lägg till en bild</span>
+     </li>
+
+        <li>
+       <a href="changePrice.aspx">
+         <i class='bx bx-money' ></i>
+         <span class="links_name">Ändra priser</span>
+       </a>
+       <span class="tooltip">Ändra priser</span>
+     </li>
+          
+     <li class="profile">
+         <div class="profile-details">
+           <img src="Images/logoNonBg.png" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Laith Shaiban</div>
+             <div class="job">Adminstratör</div>
+           </div>
+         </div>
+
+         <button runat="server" id="logOut_btn" >
+          <a>
+         <i class='bx bx-log-out-circle' id="log_out"></i>
+         </a>
+          <span class="tooltip" title="logga ut"></span>
+         </button>
+          
+        <%-- <i class='bx bx-log-out' id="log_out" ></i>--%>
+     </li>
+
+        <li>
+
+        </li>
+    </ul>
+  </div>
+
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        <script type="text/javascript">
+            //Admin dashboard ---> Sidebar.
+
+            let sidebar = document.querySelector(".sidebar");
+            let closeBtn = document.querySelector("#btn");
+
+            closeBtn.addEventListener("click", () => {
+                sidebar.classList.toggle("open");
+                menuBtnChange();//calling the function(optional)
+            });
+
+
+            // following are the code to change sidebar button(optional)
+            function menuBtnChange() {
+                if (sidebar.classList.contains("open")) {
+                    closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+                }
+                else {
+                    closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
+                }
+            }
+        </script>
+          
+    </form>
+
+
+   
+
+</body>
+</html>

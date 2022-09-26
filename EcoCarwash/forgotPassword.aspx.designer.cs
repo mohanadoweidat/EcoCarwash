@@ -11,7 +11,7 @@ namespace EcoCarwash
 {
 
 
-    public partial class index
+    public partial class forgotPassword
     {
 
         /// <summary>
@@ -24,39 +24,48 @@ namespace EcoCarwash
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// logInBtn control.
+        /// resetPassTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton logInBtn;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText resetPassTextBox;
 
         /// <summary>
-        /// adminPnlBtn control.
+        /// getPwdBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton adminPnlBtn;
+        protected global::System.Web.UI.HtmlControls.HtmlButton getPwdBtn;
 
         /// <summary>
-        /// bookingBtn control.
+        /// admPwd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton bookingBtn;
+        protected global::System.Web.UI.WebControls.Label admPwd;
 
         /// <summary>
-        /// copyRightLbl control.
+        /// loggaInBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label copyRightLbl;
+        protected global::System.Web.UI.HtmlControls.HtmlButton loggaInBtn;
+
+        /// <summary>
+        /// homeBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton homeBtn;
     }
 }

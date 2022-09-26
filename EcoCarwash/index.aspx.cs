@@ -14,6 +14,37 @@ namespace EcoCarwash
             string date = DateTime.Now.Year.ToString();
              
             copyRightLbl.Text = "© " + date + " Alla rättigheter förbehållna | Eco Biltvätt AB";
+             
+            logInBtn.ServerClick += LogInBtn_ServerClick;
+            
+            adminPnlBtn.ServerClick += AdminPnlBtn_ServerClick;
+
+            if (!IsPostBack)
+            {
+                if (Session["loggedIn"] != null)
+                {
+                    logInBtn.Visible = false;
+                    adminPnlBtn.Visible = true;
+                 }
+                else
+                {
+                  logInBtn.Visible = true;
+                  adminPnlBtn.Visible = false;
+                }
+            }
+            
+        }
+
+        private void AdminPnlBtn_ServerClick(object sender, EventArgs e)
+        {
+            Response.Redirect("changePrice.aspx");
+        }
+
+         
+
+        private void LogInBtn_ServerClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
         }
     }
 }

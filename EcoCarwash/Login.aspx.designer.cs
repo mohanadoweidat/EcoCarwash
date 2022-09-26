@@ -11,7 +11,7 @@ namespace EcoCarwash
 {
 
 
-    public partial class index
+    public partial class Login
     {
 
         /// <summary>
@@ -24,6 +24,24 @@ namespace EcoCarwash
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// usernameTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText usernameTextBox;
+
+        /// <summary>
+        /// passTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword passTextBox;
+
+        /// <summary>
         /// logInBtn control.
         /// </summary>
         /// <remarks>
@@ -33,30 +51,12 @@ namespace EcoCarwash
         protected global::System.Web.UI.HtmlControls.HtmlButton logInBtn;
 
         /// <summary>
-        /// adminPnlBtn control.
+        /// homeBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton adminPnlBtn;
-
-        /// <summary>
-        /// bookingBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton bookingBtn;
-
-        /// <summary>
-        /// copyRightLbl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label copyRightLbl;
+        protected global::System.Web.UI.HtmlControls.HtmlButton homeBtn;
     }
 }
