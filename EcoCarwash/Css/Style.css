@@ -112,11 +112,16 @@ hr {
     font-size: 55px;
 }
 
+
 #infop {
     font-size: 23px;
 }
 
- 
+.about prices{
+    font-size : 20px;
+}
+
+
 
 .centered {
     position: absolute;
@@ -146,9 +151,23 @@ hr {
     font-weight: bold;
 }
 
+.centered-Prices {
+    position: absolute;
+    top: 14%;
+    left: 50%;
+    bottom: 82%;
+    transform: translate(-50%, -50%);
+    text-align: right;
+    color: #fff;
+    text-shadow: 0 0 5px rgb(0 0 0 / 30%);
+    font-family: "Nunito",sans-serif;
+    line-height: 30px;
+    font-weight: bold;
+}
 
-.headerSvg{
-    margin-bottom:7px;
+
+.headerSvg {
+    margin-bottom: 7px;
 }
 /*******************************/
 /********** Footer CSS **********/
@@ -454,8 +473,6 @@ p{
        font-weight: 700;
        text-transform: capitalize;
     }
-
-
          
     .about .section-header {
         margin-bottom: 30px;
@@ -489,6 +506,19 @@ p{
     .about .about-content ul li i {
        margin-right: 8px;
         color: #4476fb;
+    }
+
+    .name{
+        float : left
+    }
+
+    .price {
+        float : right;
+    }
+
+    .carwashInfo{
+        display : flex;
+        justify-content : space-between;
     }
 
 
@@ -753,12 +783,13 @@ p{
     }
 
 
-
+    
     #wlcp-aboutUs {
         font-size: 15px;
         margin: 20px 0px 0px 0px;
+        
     }
-     
+
      
 
     
