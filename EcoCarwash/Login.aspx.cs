@@ -25,10 +25,12 @@ namespace EcoCarwash
                 Session["loggedIn"] = "Laith";
                 string kakor = Session["loggedIn"].ToString();
                 Response.Redirect("changePrice.aspx?" + kakor);
-             }
+            }
             else
             {
                 //Visa felmeddelande.
+                errLbl.Text = "Fel lösenord eller användarnamn!";
+                errLbl.ForeColor = System.Drawing.Color.Red;
             }
         }
 

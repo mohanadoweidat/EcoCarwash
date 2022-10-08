@@ -9,6 +9,11 @@
      <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+     <!-- favicon tags -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/favicon/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon/favicon-16x16.png"/>
+
     <title>Glömt lösenord</title>
 
      <link href="Css/AdminStyle.css" rel="stylesheet" />
@@ -23,7 +28,20 @@
        /* background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);*/
         background: rgb(167,246,255);
         background: linear-gradient(90deg, rgba(167,246,255,1) 0%, rgba(162,206,255,0.8071603641456583) 50%, rgba(0,121,255,1) 100%);
-         }
+          }
+
+
+          ::placeholder {
+            text-align: center; 
+            color:black;
+          }
+
+
+          input:focus::-webkit-input-placeholder {
+                color: transparent;
+                transition: .2s; 
+          }
+
      </style>
 
 
@@ -40,8 +58,7 @@
         
       <button runat="server" id="getPwdBtn">Hämta lösenordet</button>
       <asp:Label ID="admPwd" runat="server"></asp:Label>
-      <br />
-      <br />
+       
       <button runat="server" visible="false" id="loggaInBtn">Logga in</button>
       <br />
       <br />

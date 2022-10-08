@@ -80,8 +80,13 @@
     <Content Include="Images\car.png" />
     <Content Include="Images\carpet.png" />
     <Content Include="Images\check.png" />
+    <Content Include="Images\favicon\android-chrome-192x192.png" />
+    <Content Include="Images\favicon\android-chrome-512x512.png" />
+    <Content Include="Images\favicon\apple-touch-icon.png" />
+    <Content Include="Images\favicon\favicon-16x16.png" />
+    <Content Include="Images\favicon\favicon-32x32.png" />
+    <Content Include="Images\favicon\favicon.ico" />
     <Content Include="Images\logo.png" />
-    <Content Include="Images\logoNonBg.png" />
     <Content Include="Images\sofa.png" />
     <Content Include="index.aspx" />
     <Content Include="Js\AdminJS.js" />

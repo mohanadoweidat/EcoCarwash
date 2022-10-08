@@ -2,23 +2,20 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 
-
-
+      
  </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <section class="home-section">
+    <section class="home-section" id="content-bg">
         <center>
-            <asp:Label ID="admin_email" CssClass="alert-info label" runat="server"></asp:Label>
+            <br />
+            <asp:Label ID="admin_email" Text="Välkommen Laith" CssClass="adminLbl" runat="server"></asp:Label>
             <br />
             <br />
 
             <div class="container">
-                <div class="gridView-booking">
-                    <center>
-                        <h1>Se och ändra priser på tjänster</h1>
-                    </center>
-
-                     
+                <div class="gridView-section">
+                         <h1>Se och ändra priser på tjänster</h1>
+                    
                      
                 </div>
             </div>

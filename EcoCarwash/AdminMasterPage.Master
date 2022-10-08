@@ -13,6 +13,12 @@
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
 
+      <!-- favicon tags -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/favicon/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon/favicon-16x16.png"/>
+
+
      <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- CSS Style -->
@@ -25,7 +31,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body onload="InitSidebar()">
     <form id="form1" runat="server">
 
 
@@ -34,7 +40,7 @@
     <div class="logo-details">
       
         <i class='bx bxs-home-heart icon'></i>
-        <div class="logo_name">S&L-Biltvätt
+        <div class="logo_name">S&L Admin
         </div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
@@ -46,13 +52,7 @@
         </a>
          <span class="tooltip">Startsidan</span>
       </li>
-      <li>
-        <a href="Booking.aspx">
-         <i class='bx bx-cart-alt'></i>
-          <span class="links_name">Bokningar</span>
-        </a>
-         <span class="tooltip">Bokningar</span>
-      </li>
+       
       <li>
        <a href="addImage.aspx">
          <i class='bx bx-image-add' ></i>
@@ -71,7 +71,7 @@
           
      <li class="profile">
          <div class="profile-details">
-           <img src="Images/logoNonBg.png" alt="profileImg">
+           <img src="Images/logo.png" alt="profileImg">
            <div class="name_job">
              <div class="name">Laith Shaiban</div>
              <div class="job">Adminstratör</div>
@@ -84,48 +84,17 @@
          </a>
           <span class="tooltip" title="logga ut"></span>
          </button>
-          
-        <%-- <i class='bx bx-log-out' id="log_out" ></i>--%>
+           
      </li>
-
-        <li>
-
-        </li>
+         <li>
+         </li>
     </ul>
-  </div>
-
-
-
+  </div> 
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                 <%--Content in other sites--%>
             </asp:ContentPlaceHolder>
 
-        <script type="text/javascript">
-            //Admin dashboard ---> Sidebar.
-
-            let sidebar = document.querySelector(".sidebar");
-            let closeBtn = document.querySelector("#btn");
-
-            closeBtn.addEventListener("click", () => {
-                sidebar.classList.toggle("open");
-                menuBtnChange();//calling the function(optional)
-            });
-
-
-            // following are the code to change sidebar button(optional)
-            function menuBtnChange() {
-                if (sidebar.classList.contains("open")) {
-                    closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
-                }
-                else {
-                    closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
-                }
-            }
-        </script>
-          
+         
     </form>
-
-
-   
-
-</body>
+ </body>
 </html>
