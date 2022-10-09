@@ -90,11 +90,11 @@ hr {
     background-size: cover;
 }
 
- 
+
 .bg-aboutUs {
     /* The image used */
     background-color: #b7daf5; 
-    /* Full height */
+     /* Full height */
     height: 20%;
     /* Center and scale the image nicely */
     background-position: center;

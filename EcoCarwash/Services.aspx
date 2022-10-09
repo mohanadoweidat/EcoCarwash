@@ -83,192 +83,112 @@
 
         
 
+
+        <!-- Taps buttons -->
+
+        <div class="taps-section">
+
       
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
-  </li>
 
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="sss-tab" data-bs-toggle="tab" data-bs-target="#sss-tab-pane" type="button" role="tab" aria-controls="sss-tab-pane" aria-selected="false">Contact</button>
-  </li>
-   
-</ul>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-        <table cellspacing= "20">
-      <th>Biltvätt och Båtar:</th>
-      <th>Priser</th>
-    <tr>
-      <td>Invändigt</td>
-      <td>349kr</td>
-    </tr>
-    <tr>
-       <td>Utvändigt </td>
-       <td> 349 kr</td>
-    </tr>
-  <tr>
-    <td>Djuprengöring</td>
-      <td> 749kr</td>
-  </tr>
-  <tr>
-    <td>AC tvättt </td>
-      <td> 299kr</td>
-  </tr>
-  <tr>
-    <td>MC tvätt </td>
-      <td> 349kr</td>
-  </tr>
-  <tr>
-    <td>Motortvätt </td>
-      <td>  299kr </td>
-  </tr>
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Biltvätt</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Sängtvätt</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Soffortvätt</button>
+            </li>
 
-      </table>
-    </div>
-  <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-      <!--Soffa -->
-  <table cellspacing= "20">
-    <th>Soffortvätt:</th>
-    <th>Priser</th>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="sss-tab" data-bs-toggle="tab" data-bs-target="#sss-tab-pane" type="button" role="tab" aria-controls="sss-tab-pane" aria-selected="false">Mattortvätt</button>
+            </li>
 
-    <tr>
-      <td>7-sits och större</td>
-      <td>1299kr</td>
-    </tr>
-    <tr>
-       <td>6/5 -sits </td>
-       <td> 1099kr</td>
-    </tr>
-  <tr>
-    <td>4 –sits</td>
-      <td> 799krr</td>
-  </tr>
-  <tr>
-    <td>3 –sits  </td>
-      <td> 599kr</td>
-  </tr>
-  <tr>
-    <td>2-sits</td>
-      <td> 399krr</td>
-  </tr>
-  <tr>
-    <td>Fåtölj  </td>
-      <td>  299kr </td>
-  </tr>
+        </ul>
 
-      </table>
-      </div>
-  <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-      3
-      </div>
-  <div class="tab-pane fade" id="sss-tab-pane" role="tabpanel" aria-labelledby="sss-tab" tabindex="0">
-      4
-      </div>
-</div>
+        <!-- Taps content -->
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+             
+                   <!-- Biltvätt -->
+                <table width="20%" cellspacing="2px" style="border-spacing:10px"  align="center" >
+                    <br />
+                     <th>Typ av tjänst:</th>
+                    <th>Pris</th>
+                     
+                    <tr>
+                        <td>Invändigt</td>
+                        <td>349kr</td>
+                    </tr>
+                    <tr>
+                        <td>Utvändigt </td>
+                        <td>349 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Djuprengöring</td>
+                        <td>749kr</td>
+                    </tr>
+                    <tr>
+                        <td>AC tvättt </td>
+                        <td>299kr</td>
+                    </tr>
+                    <tr>
+                        <td>MC tvätt </td>
+                        <td>349kr</td>
+                    </tr>
+                    <tr>
+                        <td>Motortvätt </td>
+                        <td>299kr </td>
+                    </tr>
+                 </table>
+            </div>
+
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+              
+            </div>
+
+
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                  <!--Soffa -->
+                <table cellspacing="40" align="center">
+                    <th>Soffortvätt:</th>
+                    <th>Priser</th>
+
+                    <tr>
+                        <td>7-sits och större</td>
+                        <td>1299kr</td>
+                    </tr>
+                    <tr>
+                        <td>6/5 -sits </td>
+                        <td>1099kr</td>
+                    </tr>
+                    <tr>
+                        <td>4 –sits</td>
+                        <td>799krr</td>
+                    </tr>
+                    <tr>
+                        <td>3 –sits  </td>
+                        <td>599kr</td>
+                    </tr>
+                    <tr>
+                        <td>2-sits</td>
+                        <td>399krr</td>
+                    </tr>
+                    <tr>
+                        <td>Fåtölj  </td>
+                        <td>299kr </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="tab-pane fade" id="sss-tab-pane" role="tabpanel" aria-labelledby="sss-tab" tabindex="0">
+                4
+            </div>
+        </div>
      
-
- 
-
- 
-
-
-        
-
-
-
-        
-
-       
-                   
-        <!-- Services Start -->
-       <%-- <div class="about">
-            <div class="container">
-                <div class="row align-items-center">
-                    <!--Contents för hemsidan -->
-                       <div class="centered-Prices col-md-12 text-center">
-                           <p id="prices">Priser</p>
-
-
-
-                        </div>
-                 <ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="carwash-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Biltvätt</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="bedwash-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Sängtvätt</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="couchwash-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Sofftvätt</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="carpetwash-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" >Matttvätt</button>
-  </li>
-</ul>
-
-
-
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-      <div>
-         
-      
-      
-      
-      <div class="container">
-              <table cellspacing= "20">
-    <th>Soffortvätt:</th>
-    <th>Priser</th>
-
-    <tr>
-      7-sits och större
-      <td>1299kr</td>
-    </tr>
-    <tr>
-       <td>6/5 -sits </td>
-       <td> 1099kr</td>
-    </tr>
-  <tr>
-    <td>4 –sits</td>
-      <td> 799krr</td>
-  </tr>
-  <tr>
-    <td>3 –sits  </td>
-      <td> 599kr</td>
-  </tr>
-  <tr>
-    <td>2-sits</td>
-      <td> 399krr</td>
-  </tr>
-  <tr>
-    <td>Fåtölj  </td>
-      <td>  299kr </td>
-  </tr>
-            </div>
-    
-  </div>
-  <div class="tab-pane " id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-
-      </div>
-  <div class="tab-pane " id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0"> test 3</div>
-  <div class="tab-pane " id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">test 4</div>
-</div>
-                   
-                </div>
-            </div>
-        </div>--%>
-        <!-- Services End -->
-    
-         
-       
-
+            
 
        <br />
          <!-- Footer -->
