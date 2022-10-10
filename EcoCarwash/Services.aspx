@@ -98,11 +98,11 @@
                 <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Sängtvätt</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Soffortvätt</button>
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Sofftvätt</button>
             </li>
 
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="sss-tab" data-bs-toggle="tab" data-bs-target="#sss-tab-pane" type="button" role="tab" aria-controls="sss-tab-pane" aria-selected="false">Mattortvätt</button>
+                <button class="nav-link" id="sss-tab" data-bs-toggle="tab" data-bs-target="#sss-tab-pane" type="button" role="tab" aria-controls="sss-tab-pane" aria-selected="false">Mattvätt</button>
             </li>
 
         </ul>
@@ -147,15 +147,41 @@
 
             <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
               
+
+                     <table width="20%" cellspacing="2px" style="border-spacing:10px"  align="center" >
+                    <br />
+                     <th>Typ av tjänst:</th>
+                    <th>Pris</th>
+                     
+                    <tr>
+                        <td>Kingsize</td>
+                        <td>999kr</td>
+                    </tr>
+                    <tr>
+                        <td>180/160/140 </td>
+                        <td>749kr</td>
+                    </tr>
+                    <tr>
+                        <td>120/90</td>
+                        <td>399kr</td>
+                    </tr>
+                    <tr>
+                        <td>Barnsäng </td>
+                        <td>199kr</td>
+                    </tr>
+        
+                 </table>
+
             </div>
 
 
             <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
                   <!--Soffa -->
-                <table cellspacing="40" align="center">
-                    <th>Soffortvätt:</th>
-                    <th>Priser</th>
-
+                 <table width="20%" cellspacing="2px" style="border-spacing:10px"  align="center" >
+                    <br />
+                     <th>Typ av tjänst:</th>
+                    <th>Pris</th>
+                     
                     <tr>
                         <td>7-sits och större</td>
                         <td>1299kr</td>
@@ -165,23 +191,22 @@
                         <td>1099kr</td>
                     </tr>
                     <tr>
-                        <td>4 –sits</td>
-                        <td>799krr</td>
+                        <td>4–sits</td>
+                        <td>799kr</td>
                     </tr>
                     <tr>
-                        <td>3 –sits  </td>
+                        <td>3-sits </td>
                         <td>599kr</td>
                     </tr>
                     <tr>
-                        <td>2-sits</td>
-                        <td>399krr</td>
+                        <td>2-sits </td>
+                        <td>399kr</td>
                     </tr>
                     <tr>
-                        <td>Fåtölj  </td>
+                        <td>Fåtölj </td>
                         <td>299kr </td>
                     </tr>
-
-                </table>
+                 </table>
             </div>
             <div class="tab-pane fade" id="sss-tab-pane" role="tabpanel" aria-labelledby="sss-tab" tabindex="0">
                 4
