@@ -13,7 +13,7 @@ namespace EcoCarwash
         {
             string date = DateTime.Now.Year.ToString();
 
-            copyRightLbl.Text = "© " + date + " Alla rättigheter förbehållna | Eco Biltvätt AB";
+          //  copyRightLbl.Text = "© " + date + " Alla rättigheter förbehållna | Eco Biltvätt AB";
         }
     }
 }
