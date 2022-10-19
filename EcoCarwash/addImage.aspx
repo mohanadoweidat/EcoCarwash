@@ -35,16 +35,72 @@
 
                         <br />
                         <br />
+                        <asp:Label ID="InfoLbl" runat="server"></asp:Label>
+                        <br />
                          <button type="button" runat="server" id="uploadBtn" class="file-upload-btn">Lägg till bilden!</button>
                     </div>
                  </div>
 
                 <br />
 
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
              <!--Show Images-->
                  <div class="gridView-section">
                          <h1>Ta bort en bild</h1>
-                 
+                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                         <ContentTemplate>
+                             <asp:GridView ID="ImgGrid" AutoGenerateColumns="false" OnRowDeleting="ImgGrid_RowDeleting" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Dashed" Width="60%" BorderWidth="2px" CellPadding="3" GridLines="Horizontal">
+                                 <AlternatingRowStyle BackColor="#DCDCDC"></AlternatingRowStyle>
+
+                                 <FooterStyle BackColor="#CCCCCC" ForeColor="Black"></FooterStyle>
+
+                                 <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White"></HeaderStyle>
+
+                                 <PagerStyle HorizontalAlign="Center" BackColor="#999999" ForeColor="Black"></PagerStyle>
+
+                                 <RowStyle BackColor="#EEEEEE" ForeColor="Black"></RowStyle>
+
+                                 <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White"></SelectedRowStyle>
+
+                                 <SortedAscendingCellStyle BackColor="#F1F1F1"></SortedAscendingCellStyle>
+
+                                 <SortedAscendingHeaderStyle BackColor="#0000A9"></SortedAscendingHeaderStyle>
+
+                                 <SortedDescendingCellStyle BackColor="#CAC9C9"></SortedDescendingCellStyle>
+
+                                 <SortedDescendingHeaderStyle BackColor="#000065"></SortedDescendingHeaderStyle>
+
+                                 <EmptyDataTemplate>
+                                     Det finns inga bilder inlagda!
+                                 </EmptyDataTemplate>
+
+
+                                 <Columns>
+                                     <asp:TemplateField HeaderText="Ta bort">
+                                         <ItemTemplate>
+                                             <asp:Button ID="deleteBtn" CssClass="remove-image_grid" CommandName="Delete" runat="server" Text="X" />
+                                         </ItemTemplate>
+                                     </asp:TemplateField>
+
+
+                                     <asp:TemplateField>
+                                         <ItemTemplate>
+                                             <asp:Label ID="IdLbl" runat="server" Visible="false" Text='<%#Eval("Id") %>'></asp:Label>
+                                         </ItemTemplate>
+                                     </asp:TemplateField>
+
+
+                                       <asp:TemplateField HeaderText="Bildnamn">
+                                         <ItemTemplate>
+                                             <asp:Label ID="NameLbl" runat="server" Text='<%#Eval("ImageName") %>'></asp:Label>
+                                         </ItemTemplate>
+                                     </asp:TemplateField>
+
+                                 </Columns>
+
+                             </asp:GridView>
+                         </ContentTemplate>
+                     </asp:UpdatePanel>
                 </div>
  
         </center>

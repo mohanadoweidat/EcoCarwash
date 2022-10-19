@@ -733,13 +733,22 @@ p{
     }
 
 
-      
+
+
+
+/*******************************/
+/********** Services **********/
+/*******************************/
+
+
+.servies-taps{
+    margin-left:60px;
+}
+
 
 /*******************************/
 /********** Media query **********/
 /*******************************/
-
-  
 /* If the screen size is 600px wide or less, hide the element */
 @media screen and (max-width: 1000px) {
     #wlcp {
