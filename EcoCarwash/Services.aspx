@@ -31,6 +31,7 @@
 <body>
     <form id="form1" runat="server">
         
+       
          <!-- Navbar -->
         <nav class="navbar fixed-top navbar-expand-lg  navbar navbar-light" id="navbar">
             <img src="Images/logo.png" width="60" height="60" />
@@ -209,15 +210,28 @@
                  </table>
             </div>
             <div class="tab-pane fade" id="sss-tab-pane" role="tabpanel" aria-labelledby="sss-tab" tabindex="0">
-                4
+                   <!--Soffa -->
+                 <table width="20%" cellspacing="2px" style="border-spacing:10px"  align="center" >
+                    <br />
+                     <th>Typ av tjänst:</th>
+                    <th>Pris</th>
+                     
+                    <tr>
+                        <td>Mattvätt</td>
+                        <td>90 kr/m^2</td>
+                    </tr>
+                     
+                     
+                   
+                 </table>
             </div>
         </div>
      
-            
+            </div>
 
        <br />
-         <!-- Footer -->
-         <footer class="footer-color text-center">
+        <%-- <!-- Footer -->
+         <footer class="footer-color text-center" id="f">
               <!-- Grid container -->
               <div class="container p-4">
 
@@ -235,9 +249,57 @@
                </div>
               <!-- Grid container -->
              </footer>
-         <!-- Footer -->
+         <!-- Footer -->--%>
 
-         
+      
+        <!-- Footer -->
+<footer class="page-footer font-small darken-3 fixed-bottom" id="f">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row">
+
+        <center>
+      <!-- Grid column -->
+      
+        
+            <br>
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          
+      <!-- Grid column -->
+            </center>
+    </div>
+    <!-- Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">
+      <%
+        string date = DateTime.Now.Year.ToString();
+        copyRightLbl.Text = "© " + date + " Alla rättigheter förbehållna | Eco Biltvätt AB";
+           
+      %>
+    <asp:Label CssClass="text-dark" ID="copyRightLbl" runat="server"></asp:Label>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+            
     </form>
 
      <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -176,14 +176,14 @@ hr {
     background-color: #e3f2fd;
 }
 
+#f {
+    background-color: #e3f2fd;
+}
 
  
 /*******************************/
 /********** Index CSS **********/
 /*******************************/
-
-
-
 /*Logo*/
 #l {
     width: 55%;
@@ -192,7 +192,7 @@ hr {
     color: #FFFFFF;
     letter-spacing: .1em;
     font-weight: bolder !important;
-    border-radius:40px;
+    border-radius: 40px;
 }
 
  
