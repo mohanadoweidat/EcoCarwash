@@ -1,12 +1,14 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="aboutUs.aspx.cs" Inherits="EcoCarwash.aboutUs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="subscription.aspx.cs" Inherits="EcoCarwash.subscription" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Om oss</title>
 
-     <!-- Required meta tags -->
+
+    <title>Abonnemang</title>
+
+       <!-- Required meta tags -->
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
@@ -14,34 +16,31 @@
     <link rel="apple-touch-icon" sizes="180x180" href="Images/favicon/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon/favicon-16x16.png"/>
+     
+
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
-     
-
-      <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-
+    
      <!-- CSS style -->
     <link href="Css/Style.css" rel="stylesheet" />
 
      <!--JS-->
     <script src="Js/main.js"></script>
-     
-    <!-- font-awesome- icons -->
+
+
+     <!-- font-awesome- icons -->
+   <%-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>--%>
      <script src="https://kit.fontawesome.com/f729346f3e.js" crossorigin="anonymous"></script>
 
 
-
-   
-
- 
-
+     <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+     
 </head>
-<body onload="showSlides()">
+<body>
     <form id="form1" runat="server">
-        
-          <!-- Navbar -->
+         
+         <!-- Navbar -->
         <nav class="navbar fixed-top navbar-expand-lg  navbar navbar-light" id="navbar">
 
             <center>
@@ -70,12 +69,11 @@
                         <a class="nav-link " href="Booking.aspx">Boka tid</a>
                     </li>
 
-                      <li class="nav-item px-2 ">
+                    <li class="nav-item px-2 activeItem ">
                         <a class="nav-link " href="subscription.aspx">abonnemang</a>
                     </li>
 
-
-                    <li class="nav-item px-2 activeItem">
+                    <li class="nav-item px-2">
                         <a class="nav-link" href="aboutUs.aspx">Om oss</a>
                     </li>
 
@@ -86,103 +84,30 @@
                 </ul>
 
                 <form class="form-inline my-2 my-lg-0">
-                </form>
+                 </form>
             </div>
         </nav>
+ 
+       
 
-
-
-           <!-- Content -->
+             <!-- Content -->
         <div class="bg-aboutUs"></div>
         <div class="centered-aboutUs">
-            <p id="wlcp-aboutUs">Om oss</p>
+            <p id="wlcp-aboutUs">Abonnemang</p>
         </div>
         <br />
-
-
-          
-        <!-- About Start -->
-        <div class="about">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="about-img">
-                            <img src="Images/aboutUs.jpg" alt="Image">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="section-header text-left">
-                            <p>Om oss</p>
-                            <h2>Snabbt, billigt och miljövänligt</h2>
-                        </div>
-                        <div class="about-content">
-                            <p>
-                                Miljövänlig mobil biltvätt. Vi kör till dig och tvättar din bil var du vill. Vi Ångtvättar bilar, lastbilar, motorcyklar och båtar.    
-                            </p>
-                            <ul>
-                                <li><i class="far fa-check-circle"></i>Utvändig tvätt</li>
-                                <li><i class="far fa-check-circle"></i>Invändig tvätt</li>
-                                <li><i class="far fa-check-circle"></i>Djuprengöring (säten/insidan)</li>
-                                <li><i class="far fa-check-circle"></i>AC-Rengöring</li>
-                                <li><i class="far fa-check-circle"></i>Motortvätt</li>
-                                <li><i class="far fa-check-circle"></i>MC-tvätt</li>
-                                <li><i class="far fa-check-circle"></i>Båtar-tvätt</li>
-                            </ul>
-                            <a class="btn btn-outline-primary btn-lg" href="services.aspx">Läs Mer</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
          
-      <hr/>
-           
-        <center>
-        <h1>Vårt arbete:</h1>
-             </center>
-  
-        <!-- Swiper image slider -->
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="Images/aboutUs.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="Images/car.png" />
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
 
-
+         
+                     <stripe-pricing-table pricing-table-id="prctbl_1LqekHGMxC5VybbtZK4kCPB6"
+publishable-key="pk_test_51LOMn2GMxC5VybbtByZmR9Jc9kJ7ge9hDTArwOBqkR9DtLTO4wxotQ6xuc1UB6biGSLL9rCB0PrnurU6OROyDJCB00MUQXKxkM">
+</stripe-pricing-table>
              
+          
 
-              
-         <br />
-         <!-- Footer -->
-        <footer class="footer-color text-center">
+         
+           <!-- Footer -->
+        <footer class="footer-color text-center fdown">
             <!-- Grid container -->
             <div class="container p-4">
 
@@ -208,11 +133,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-      <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
      
-
 </body>
 </html>

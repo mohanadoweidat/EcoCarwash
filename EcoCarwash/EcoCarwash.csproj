@@ -72,6 +72,7 @@
     <Content Include="changePrice.aspx" />
     <Content Include="contactUs.aspx" />
     <Content Include="Css\AdminStyle.css" />
+    <Content Include="Css\LoginStyle.css" />
     <Content Include="Css\Style.css" />
     <Content Include="forgotPassword.aspx" />
     <Content Include="Images\aboutUs.jpg" />
@@ -93,6 +94,7 @@
     <Content Include="Js\main.js" />
     <Content Include="Login.aspx" />
     <Content Include="Services.aspx" />
+    <Content Include="subscription.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +162,13 @@
     </Compile>
     <Compile Include="Services.aspx.designer.cs">
       <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="subscription.aspx.cs">
+      <DependentUpon>subscription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="subscription.aspx.designer.cs">
+      <DependentUpon>subscription.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

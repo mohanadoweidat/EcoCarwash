@@ -63,6 +63,12 @@
                         <a class="nav-link " href="Booking.aspx">Boka tid</a>
                     </li>
 
+
+                      <li class="nav-item px-2 ">
+                        <a class="nav-link " href="subscription.aspx">abonnemang</a>
+                    </li>
+
+
                     <li class="nav-item px-2">
                         <a class="nav-link" href="aboutUs.aspx">Om oss</a>
                     </li>

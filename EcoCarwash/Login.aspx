@@ -17,73 +17,80 @@
 
     <title>Admin Inloggning</title>
     <link href="Css/AdminStyle.css" rel="stylesheet" />
-      <script src="Js/AdminJS.js"></script>
+    <link href="Css/LoginStyle.css" rel="stylesheet" />
+    <script src="Js/AdminJS.js"></script>
       
      <%--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">--%>
 
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 
-
-   
-
+     
      <%--Sweetalert2--%>
     <script src="sweetalert2.all.min.js"></script>
     <script src="Js/InfoMessages.js"></script>
 
 
-    <style>
-          body {
-       /* background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);*/
-        background: rgb(167,246,255);
-        background: linear-gradient(90deg, rgba(167,246,255,1) 0%, rgba(162,206,255,0.8071603641456583) 50%, rgba(0,121,255,1) 100%);
-          }
-
-          a:visited{
-              color:cornflowerblue;
-          }
-          a:hover{
-              color:darkblue;
-          }
-
-        ::placeholder {
-            text-align: center; 
-            color:black;
-        }
- 
-         input:focus::-webkit-input-placeholder {
-                color: transparent;
-                transition: .2s; 
-         }
-
-     </style>
+    
      
 </head>
 <body>
     <form id="form1" runat="server">
 
-        <div class="login">
-             
-  <div class="form">
-       <h2>Admin inloggning</h2>
-    <form class="login-form">
-      <span class="material-icons">person</span>
-      <input runat="server" id="usernameTextBox" type="text" placeholder="Användarnamn"  required="required"/>
-      <input runat="server" id="passTextBox" type="password" placeholder="Lösenord" required="required" />
-        <asp:Label ID="errLbl" Font-Size="Medium" runat="server"></asp:Label>
-        <br />
-        <br />
-       <a href="forgotPassword.aspx">Glömt lösenord?</a>
-        <br />
-        <br />
-      <button runat="server" id="logInBtn">Logga in</button>
-       <br />
-       <br />
-       <button runat="server" id="homeBtn">Startsidan</button>
-          
-     </form> 
-    </div>
+        <div class="header">
+
+<!--Content before waves-->
+<div class="inner-header flex">  
+  <div class="login">
+
+      <div class="form">
+          <h2>Admin inloggning</h2>
+          <form class="login-form">
+              <span class="material-icons">person</span>
+              <input runat="server" id="usernameTextBox" type="text" placeholder="Användarnamn" required="required" />
+              <input runat="server" id="passTextBox" type="password" placeholder="Lösenord" required="required" />
+              <asp:Label ID="errLbl" Font-Size="Medium" runat="server"></asp:Label>
+              <br />
+              <br />
+              <a href="forgotPassword.aspx">Glömt lösenord?</a>
+              <br />
+              <br />
+              <button runat="server" id="logInBtn">Logga in</button>
+              <br />
+              <br />
+              <button runat="server" id="homeBtn">Startsidan</button>
+
+          </form>
+      </div>
+        </div>
 </div>
 
+<!--Waves Container-->
+            <div>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                    </g>
+                </svg>
+            </div>
+<!--Waves end-->
+
+</div>
+<!--Header ends-->
+
+        <!--Content starts-->
+        <div class="content flex">
+            <h1>S&L Eco-biltvätt </h1>
+        </div>
+        <!--Content ends-->
+
+         
 
     </form>
   </body>

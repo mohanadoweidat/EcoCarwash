@@ -33,6 +33,9 @@
 
 
 
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
 
   
 </head>
@@ -42,7 +45,7 @@
          
          <!-- Navbar -->
         <nav class="navbar fixed-top navbar-expand-lg  navbar navbar-light" id="navbar">
-             
+
             <center>
                 <a href="index.aspx">
                     <svg id="svgLogo" width="232.83" height="18.853" viewBox="0 0 232.83 18.853" xmlns="http://www.w3.org/2000/svg">
@@ -64,9 +67,13 @@
                     <li class="nav-item px-2">
                         <a class="nav-link " href="Services.aspx">Våra tjänster</a>
                     </li>
-                     
+
                     <li class="nav-item px-2">
-                        <a class="nav-link " href="Booking.aspx">Boka tid</a>
+                        <a href="#" class="nav-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/company2022'});return false;">Boka tid</a>
+                    </li>
+
+                    <li class="nav-item px-2">
+                        <a class="nav-link " href="subscription.aspx">abonnemang</a>
                     </li>
 
                     <li class="nav-item px-2">
@@ -76,18 +83,18 @@
                     <li class="nav-item px-2">
                         <a class="nav-link" href="contactUs.aspx">Kontakta oss</a>
                     </li>
-                     
+
                 </ul>
 
                 <form class="form-inline my-2 my-lg-0">
-                  
+
                     <div id="buttonsGroup">
-                         <button runat="server" id="logInBtn" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Logga in</button>
-                             <button runat="server" id="adminPnlBtn" visible="false" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Dashboard</button>
+                        <button runat="server" id="logInBtn" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Logga in</button>
+                        <button runat="server" id="adminPnlBtn" visible="false" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Dashboard</button>
                     </div>
-                        
-                  
-                 </form>
+
+
+                </form>
             </div>
         </nav>
  
@@ -130,11 +137,16 @@
                             <div class="col">
                                 <div class="card">
 
-                                    <img class="card-img-top" src="Images/car.png" alt="Card image cap">
+                                    <img class="card-img-top" src="Images/car.png" alt="Card image cap"/>
                                     <div class="card-body">
                                         <h5 class="card-title">Biltvätt</h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        <a href="#" class="btn btn-primary">Läs mer...</a> <%--btn btn-outline-primary--%>
+                                        <p class="card-text">
+                                            Vi kommer till dig och ångtvättar din bil hos dig i hela Skåne och Halland.
+                                         </p>
+                                        <h6 class="card-text" style="font-weight:600">
+                                            Ångtvätt gör att din bil blir ren och bakteriefri, plus att vi kan tvätta de små detaljerna som inte kan tvättas hos andra biltvättar.
+                                         </h6>
+                                        <a href="Services.aspx" class="btn btn-primary" style="margin-top:10px">Läs mer...</a> <%--btn btn-outline-primary--%>
                                     </div>
                                 </div>
                             </div>
@@ -144,8 +156,13 @@
                                     <img class="card-img-top" src="Images/bed.png" alt="Card image cap" />
                                     <div class="card-body">
                                         <h5 class="card-title">Sängtvätt</h5>
-                                       <%-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>--%>
-                                        <a href="#" class="btn btn-primary">Läs mer...</a>
+                                         <p class="card-text">
+                                           Vi kommer till dig och tvättar din säng hos dig i hela Skåne och Halland.
+                                         </p>
+                                        <p class="card-text">
+                                             Vi utför kem/ångtvätt som gör att smuts och fläckar försvinner och gör sängen blir ren och bakteriefri.
+                                        </p>
+                                        <a href="Services.aspx" class="btn btn-primary">Läs mer...</a>
                                     </div>
                                 </div>
                             </div>
@@ -155,8 +172,13 @@
                                     <img class="card-img-top" src="Images/sofa.png" alt="Card image cap" />
                                     <div class="card-body">
                                         <h5 class="card-title">Soffortvätt</h5>
-                                       <%-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>--%>
-                                        <a href="#" class="btn btn-primary">Läs mer...</a>
+                                         <p class="card-text">
+                                           Vi kommer till dig och tvättar din soffa hos dig i hela Skåne och Halland.
+                                         </p>
+                                        <p class="card-text">
+                                         Vi utför kem/ångtvätt som gör att smuts och fläckar försvinner och gör soffan blir ren och bakteriefri.
+                                        </p>
+                                         <a href="Services.aspx" class="btn btn-primary">Läs mer...</a>
                                     </div>
                                 </div>
                             </div>
@@ -166,8 +188,13 @@
                                     <img class="card-img-top" src="Images/carpet.png" alt="Card image cap" />
                                     <div class="card-body">
                                         <h5 class="card-title">Mattortvätt</h5>
-                                        <%--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>--%>
-                                        <a href="#" class="btn btn-primary">Läs mer...</a>
+                                         <p class="card-text">
+                                           Vi kommer till dig och tvättar din matta hos dig i hela Skåne och Halland.
+                                         </p>
+                                        <p class="card-text">
+                                          Vi utför kem/ångtvätt som gör att smuts och fläckar försvinner och gör mattan blir ren och bakteriefri.
+                                        </p>
+                                         <a href="Services.aspx" class="btn btn-primary">Läs mer...</a>
                                     </div>
                                 </div>
                             </div>
@@ -265,12 +292,14 @@
                             <br/><br/>
                             <div class="row justify-content-center">
                                 <div class="col-7 text-center">
-                                    <h5 class="blue-text text-center">Du kommer få en bekräftelse på din bokning.</h5>
-                                         <button runat="server" id="bookingBtn" class="bookingBtn" type="submit">Boka tid</button>
+                                    <h5 class="blue-text text-center">Du kommer få en bekräftelse på din bokning.</h5><br />
+                                         <%--<button runat="server" id="bookingBtn" class="bookingBtn" type="submit">Boka tid</button>--%>
+                                       <%-- Calendly button here--%>
+                                     <a href="#" class="nav-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/company2022'});return false;">Boka tid</a>
                                   </div>
                             </div>
                         </div>
-                      </fieldset>
+                   </fieldset>
                 </form>
             </div>
         </div>
@@ -285,12 +314,8 @@
 
                 <!-- Section: Social media -->
                 <section class="mb-4">
-                    <!-- Facebook -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fa-brands fa-facebook"></i></a>
-                    <!-- Instagram -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fa-brands fa-instagram"></i></a>
-
-
+                     <a class="btn"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
+                     <a class="btn"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
                 </section>
                 <!-- Section: Social media -->
                 <!-- Section: Copyright -->
