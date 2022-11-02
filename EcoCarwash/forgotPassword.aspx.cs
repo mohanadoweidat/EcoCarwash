@@ -32,17 +32,28 @@ namespace EcoCarwash
 
         private void GetPwdBtn_ServerClick(object sender, EventArgs e)
         {
-            if (info.adminResetCode == resetPassTextBox.Value.Trim())
+            if (resetPassTextBox.Value != "")
             {
-                getPwdBtn.Visible = false;
-                loggaInBtn.Visible = true;
-                admPwd.Text = info.adminPassword;
+                if (info.adminResetCode == resetPassTextBox.Value.Trim())
+                {
+                    getPwdBtn.Visible = false;
+                    loggaInBtn.Visible = true;
+                    admPwd.Text = info.adminPassword;
+                }
+                else
+                {
+                    if (IsPostBack)
+                    {
+                        //Visa felmeddelande 
+                        ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "resetMsg", " WrongResetCode();", true);
+                    }
+                }
             }
             else
             {
-                //Visa felmeddelande 
-                
+                ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "emptyFields();", true);
             }
+           
         }
     }
 }

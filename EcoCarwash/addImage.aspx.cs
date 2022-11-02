@@ -81,8 +81,6 @@ namespace EcoCarwash
                     cmd.ExecuteNonQuery();
                     InfoLbl.Text = "Bilden har lagts till!";
                     BindGrid();
-
-
                 }
              }
         }
@@ -102,6 +100,12 @@ namespace EcoCarwash
             SqlDataReader rd = cmd.ExecuteReader();
             ImgGrid.DataSource = rd;
             ImgGrid.DataBind();
+
+
+             
+
+             
+
             con.Close();
 
         }
@@ -121,6 +125,17 @@ namespace EcoCarwash
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             BindGrid();
+        }
+
+        protected void ImgGrid_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                System.Data.Common.DbDataRecord record = (System.Data.Common.DbDataRecord)e.Row.DataItem;
+                
+                string imageUrl = "data:image/jpg;base64," + Convert.ToBase64String((byte[])record["ImageData"]);
+                (e.Row.FindControl("ImageBox") as Image).ImageUrl = imageUrl;
+            }
         }
     }
 }

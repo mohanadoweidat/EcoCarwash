@@ -13,7 +13,7 @@ namespace EcoCarwash
         {
             string date = DateTime.Now.Year.ToString();
              
-            copyRightLbl.Text = "© " + date + " Alla rättigheter förbehållna | Eco Biltvätt AB";
+            copyRightLbl.Text = "© " + date + " Alla rättigheter förbehållna | S&L ECO-tvätt AB";
              
             logInBtn.ServerClick += LogInBtn_ServerClick;
             
@@ -37,7 +37,7 @@ namespace EcoCarwash
 
         private void AdminPnlBtn_ServerClick(object sender, EventArgs e)
         {
-            Response.Redirect("changePrice.aspx");
+            Response.Redirect("addService.aspx");
         }
 
          

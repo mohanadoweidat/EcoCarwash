@@ -26,8 +26,8 @@
 
      
      <%--Sweetalert2--%>
-    <script src="sweetalert2.all.min.js"></script>
-    <script src="Js/InfoMessages.js"></script>
+   <script src="Js/InfoMessages.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 
     
@@ -48,7 +48,6 @@
               <span class="material-icons">person</span>
               <input runat="server" id="usernameTextBox" type="text" placeholder="Användarnamn" required="required" />
               <input runat="server" id="passTextBox" type="password" placeholder="Lösenord" required="required" />
-              <asp:Label ID="errLbl" Font-Size="Medium" runat="server"></asp:Label>
               <br />
               <br />
               <a href="forgotPassword.aspx">Glömt lösenord?</a>
@@ -86,7 +85,7 @@
 
         <!--Content starts-->
         <div class="content flex">
-            <h1>S&L Eco-biltvätt </h1>
+            <h1>S&L ECO-tvätt </h1>
         </div>
         <!--Content ends-->
 

@@ -516,12 +516,13 @@
 }
 
 .remove-image_grid {
-    width: 60%;
+    width:30%;
+    height:30%;
     margin: 0;
     color: #fff;
     background: #FF3333;
     border: none;
-    padding: 10px;
+    padding: 5px;
     border-radius: 4px;
     border-bottom: 4px solid #FF3333;
     transition: all .2s ease;

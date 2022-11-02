@@ -3,6 +3,11 @@
      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 
      
+    <style>
+        .egen{
+            margin:15px;
+        }
+    </style>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -49,34 +54,37 @@
                          <h1>Ta bort en bild</h1>
                      <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                          <ContentTemplate>
-                             <asp:GridView ID="ImgGrid" AutoGenerateColumns="false" OnRowDeleting="ImgGrid_RowDeleting" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Dashed" Width="60%" BorderWidth="2px" CellPadding="3" GridLines="Horizontal">
-                                 <AlternatingRowStyle BackColor="#DCDCDC"></AlternatingRowStyle>
+                             <asp:GridView ID="ImgGrid"  AutoGenerateColumns="false" OnRowDataBound="ImgGrid_RowDataBound" OnRowDeleting="ImgGrid_RowDeleting" runat="server" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="1px" CellSpacing="10" CellPadding="10" GridLines="Horizontal" Width="100%">
+                                 
 
-                                 <FooterStyle BackColor="#CCCCCC" ForeColor="Black"></FooterStyle>
+                           <FooterStyle BackColor="White" ForeColor="#333333"></FooterStyle>
+                               
+                           <HeaderStyle BackColor="#00CCCC" Font-Bold="True" ForeColor="White" HorizontalAlign="Center"></HeaderStyle>
 
-                                 <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White"></HeaderStyle>
+                            <PagerStyle HorizontalAlign="Center" BackColor="#336666" ForeColor="White"></PagerStyle>
 
-                                 <PagerStyle HorizontalAlign="Center" BackColor="#999999" ForeColor="Black"></PagerStyle>
+                            <RowStyle BackColor="White" ForeColor="#333333"></RowStyle>
 
-                                 <RowStyle BackColor="#EEEEEE" ForeColor="Black"></RowStyle>
+                            <SelectedRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White"></SelectedRowStyle>
 
-                                 <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White"></SelectedRowStyle>
+                            <SortedAscendingCellStyle BackColor="#F7F7F7"></SortedAscendingCellStyle>
 
-                                 <SortedAscendingCellStyle BackColor="#F1F1F1"></SortedAscendingCellStyle>
+                            <SortedAscendingHeaderStyle BackColor="#487575"></SortedAscendingHeaderStyle>
 
-                                 <SortedAscendingHeaderStyle BackColor="#0000A9"></SortedAscendingHeaderStyle>
+                            <SortedDescendingCellStyle BackColor="#E5E5E5"></SortedDescendingCellStyle>
 
-                                 <SortedDescendingCellStyle BackColor="#CAC9C9"></SortedDescendingCellStyle>
+                            <SortedDescendingHeaderStyle BackColor="#275353"></SortedDescendingHeaderStyle>
 
-                                 <SortedDescendingHeaderStyle BackColor="#000065"></SortedDescendingHeaderStyle>
-
-                                 <EmptyDataTemplate>
+                            <EmptyDataTemplate>
+                                  <center>
                                      Det finns inga bilder inlagda!
-                                 </EmptyDataTemplate>
+                                </center>
+                                  </EmptyDataTemplate>
 
 
+                                
                                  <Columns>
-                                     <asp:TemplateField HeaderText="Ta bort">
+                                     <asp:TemplateField HeaderText="Ta bort" ItemStyle-HorizontalAlign="Center">
                                          <ItemTemplate>
                                              <asp:Button ID="deleteBtn" CssClass="remove-image_grid" CommandName="Delete" runat="server" Text="X" />
                                          </ItemTemplate>
@@ -85,16 +93,29 @@
 
                                      <asp:TemplateField>
                                          <ItemTemplate>
-                                             <asp:Label ID="IdLbl" runat="server" Visible="false" Text='<%#Eval("Id") %>'></asp:Label>
+                                             <asp:Label ID="IdLbl" Visible="false" runat="server" Text='<%#Eval("Id") %>'></asp:Label>
                                          </ItemTemplate>
                                      </asp:TemplateField>
 
 
-                                       <asp:TemplateField HeaderText="Bildnamn">
+                                       <asp:TemplateField HeaderText="Bildnamn" ItemStyle-HorizontalAlign="Center" >
                                          <ItemTemplate>
+                                              
                                              <asp:Label ID="NameLbl" runat="server" Text='<%#Eval("ImageName") %>'></asp:Label>
+                                              
                                          </ItemTemplate>
                                      </asp:TemplateField>
+
+
+                                      <asp:TemplateField HeaderText="Bilden" ItemStyle-HorizontalAlign="Center">
+                                         <ItemTemplate>
+                                             
+                                             <asp:Image ID="ImageBox" CssClass="egen" Width="100" Height="100" runat="server"/>
+                                         </ItemTemplate>
+                                     </asp:TemplateField>
+
+
+
 
                                  </Columns>
 

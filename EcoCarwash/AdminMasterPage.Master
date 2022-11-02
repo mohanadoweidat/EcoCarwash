@@ -21,8 +21,13 @@
 
      <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
+
+
+
     <!-- CSS Style -->
     <link href="Css/AdminStyle.css" rel="stylesheet" />
+
+    
 
       <!-- Js -->
     <script src="Js/AdminJS.js"></script>
@@ -52,6 +57,16 @@
         </a>
          <span class="tooltip">Startsidan</span>
       </li>
+
+
+        <li>
+       <a href="addService.aspx">
+        <i class='bx bx-add-to-queue'></i>
+         <span class="links_name">Lägg till en tjänst</span>
+       </a>
+       <span class="tooltip">Lägg till en tjänst</span>
+     </li>
+
        
       <li>
        <a href="addImage.aspx">

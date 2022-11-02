@@ -20,18 +20,25 @@ namespace EcoCarwash
 
         private void LogInBtn_ServerClick(object sender, EventArgs e)
         {
-            if (info.adminUsername == usernameTextBox.Value && info.adminPassword == passTextBox.Value)
+
+            if (usernameTextBox.Value != "" || passTextBox.Value != "")
             {
-                Session["loggedIn"] = "Laith";
-                string kakor = Session["loggedIn"].ToString();
-                Response.Redirect("changePrice.aspx?" + kakor);
+                if (info.adminUsername == usernameTextBox.Value && info.adminPassword == passTextBox.Value)
+                {
+                    Session["loggedIn"] = "Laith";
+                    string kakor = Session["loggedIn"].ToString();
+                    Response.Redirect("addService.aspx?" + kakor);
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", " WrongUsernamePass();", true);
+                }
             }
             else
             {
-                //Visa felmeddelande.
-                errLbl.Text = "Fel lösenord eller användarnamn!";
-                errLbl.ForeColor = System.Drawing.Color.Red;
+                ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "emptyFields();", true);
             }
+           
         }
 
         private void HomeBtn_ServerClick(object sender, EventArgs e)

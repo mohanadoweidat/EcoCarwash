@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="aboutUs.aspx" />
     <Content Include="addImage.aspx" />
+    <Content Include="addService.aspx" />
     <Content Include="changePrice.aspx" />
     <Content Include="contactUs.aspx" />
     <Content Include="Css\AdminStyle.css" />
@@ -88,9 +89,11 @@
     <Content Include="Images\favicon\favicon-32x32.png" />
     <Content Include="Images\favicon\favicon.ico" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\no-image.png" />
     <Content Include="Images\sofa.png" />
     <Content Include="index.aspx" />
     <Content Include="Js\AdminJS.js" />
+    <Content Include="Js\InfoMessages.js" />
     <Content Include="Js\main.js" />
     <Content Include="Login.aspx" />
     <Content Include="Services.aspx" />
@@ -111,6 +114,13 @@
     </Compile>
     <Compile Include="addImage.aspx.designer.cs">
       <DependentUpon>addImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addService.aspx.cs">
+      <DependentUpon>addService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addService.aspx.designer.cs">
+      <DependentUpon>addService.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminMasterPage.Master.cs">
       <DependentUpon>AdminMasterPage.Master</DependentUpon>

@@ -11,17 +11,8 @@ namespace EcoCarwash
 {
 
 
-    public partial class contactUs
+    public partial class addService
     {
-
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// ScriptManager1 control.
@@ -33,66 +24,75 @@ namespace EcoCarwash
         protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
-        /// subject control.
+        /// admin_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText subject;
+        protected global::System.Web.UI.WebControls.Label admin_email;
 
         /// <summary>
-        /// name control.
+        /// serviceCatgList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText name;
+        protected global::System.Web.UI.WebControls.DropDownList serviceCatgList;
 
         /// <summary>
-        /// email control.
+        /// serviceName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl email;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText serviceName;
 
         /// <summary>
-        /// telefon control.
+        /// servicePrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText telefon;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl servicePrice;
 
         /// <summary>
-        /// message control.
+        /// InfoLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea message;
+        protected global::System.Web.UI.WebControls.Label InfoLbl;
 
         /// <summary>
-        /// sendMessageButton control.
+        /// addServiceBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton sendMessageButton;
+        protected global::System.Web.UI.HtmlControls.HtmlButton addServiceBtn;
 
         /// <summary>
-        /// copyRightLbl control.
+        /// UpdatePanel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label copyRightLbl;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+
+        /// <summary>
+        /// serviceGrid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView serviceGrid;
     }
 }

@@ -30,10 +30,20 @@
     <!-- font-awesome- icons -->
      <script src="https://kit.fontawesome.com/f729346f3e.js" crossorigin="anonymous"></script>
 
+    <script src="Js/InfoMessages.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    
+
 </head>
 <body>
     <form id="form1" runat="server">
         
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+
              <!-- Navbar -->
         <nav class="navbar fixed-top navbar-expand-lg  navbar navbar-light" id="navbar">
              
@@ -60,7 +70,7 @@
                     </li>
                      
                     <li class="nav-item px-2">
-                        <a class="nav-link " href="Booking.aspx">Boka tid</a>
+                        <a href="#" class="nav-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/slecotvatt'});return false;">Boka tid</a>
                     </li>
 
 
@@ -137,12 +147,20 @@
                     <div class="col-md-7">
                         <div class="contact-form">
                             <div id="success"></div>
-                            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            
+
+                                <div class="control-group">
+                                  <i class="fa-solid fa-edit icon"></i>
+                                    <input type="text" runat="server" class="form-control" id="subject" placeholder="Ämne" required="required" data-validation-required-message="Vänligen ange ett ämne" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
                                 <div class="control-group">
                                     <i class="fa fa-user icon"></i>
                                     <input type="text" runat="server" class="form-control" id="name" placeholder="Ditt namn" required="required" data-validation-required-message="Vänligen ange ditt namn" />
                                     <p class="help-block text-danger"></p>
                                 </div>
+                                
                                 <div class="control-group">
                                     <i class="fa-solid fa-envelope icon"></i>
                                     <input type="email" runat="server" class="form-control" id="email" placeholder="Din e-post" required="required" data-validation-required-message="Vänligen ange din e-post" />
@@ -162,7 +180,7 @@
                                     <%--btn btn-primary--%>
                                     <button class="btn btn-outline-primary btn-lg" runat="server" type="submit" id="sendMessageButton">Skicka meddelandet</button>
                                 </div>
-                            </form>
+                             
                         </div>
                     </div>
 
@@ -178,25 +196,23 @@
 
 
          <br />
-         <!-- Footer -->
-         <footer class="footer-color text-center">
-              <!-- Grid container -->
-              <div class="container p-4">
+           <!-- Footer -->
+        <footer class="footer-color text-center fdown">
+            <!-- Grid container -->
+            <div class="container p-4">
 
                 <!-- Section: Social media -->
                 <section class="mb-4">
-                  <!-- Facebook -->
-                  <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fa-brands fa-facebook"></i></a>
-                  <!-- Instagram -->
-                  <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fa-brands fa-instagram"></i></a>
-                 </section>
+                     <a class="btn" href="https://www.facebook.com/SLBILTVATTAB"><i class="fa fa-facebook-official fa-2x" style="color:royalblue;"  aria-hidden="true"></i></a>
+                     <a class="btn"  href="https://www.instagram.com/slbiltvatt/"><i class="fa fa-instagram fa-2x" style="color:black;" aria-hidden="true"></i></a>
+                </section>
                 <!-- Section: Social media -->
-                    <!-- Section: Copyright -->
-                 <asp:Label CssClass="text-dark" ID="copyRightLbl" runat="server"></asp:Label>
-                  <!-- Section: Copyright -->
-               </div>
-              <!-- Grid container -->
-             </footer>
+                <!-- Section: Copyright -->
+                <asp:Label CssClass="text-dark" ID="copyRightLbl" runat="server"></asp:Label>
+                <!-- Section: Copyright -->
+            </div>
+            <!-- Grid container -->
+        </footer>
          <!-- Footer -->
 
 

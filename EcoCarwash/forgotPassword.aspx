@@ -23,6 +23,8 @@
 
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 
+     <script src="Js/InfoMessages.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
      
 </head>
 <body>
@@ -77,7 +79,7 @@
 
         <!--Content starts-->
         <div class="content flex">
-            <h1>S&L Eco-biltvätt </h1>
+             <h1>S&L ECO-tvätt </h1>
         </div>
         <!--Content ends-->
 
