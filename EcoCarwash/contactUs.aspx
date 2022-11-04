@@ -74,9 +74,16 @@
                     </li>
 
 
-                      <li class="nav-item px-2 ">
-                        <a class="nav-link " href="subscription.aspx">abonnemang</a>
-                    </li>
+                      <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Abonnemang
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="subscription.aspx">Se abonnemang</a>
+                         <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="https://billing.stripe.com/p/login/test_28o17GgZwf4HdqwbII">Hantera abonnemang</a>
+                     </div>
+                  </li>
 
 
                     <li class="nav-item px-2">
@@ -192,23 +199,22 @@
             </div>
         </div>
          <!-- Contact End -->
+         
 
-
-
-         <br />
+         
            <!-- Footer -->
-        <footer class="footer-color text-center fdown">
+        <footer class="footer-color text-center">
             <!-- Grid container -->
             <div class="container p-4">
 
                 <!-- Section: Social media -->
                 <section class="mb-4">
                      <a class="btn" href="https://www.facebook.com/SLBILTVATTAB"><i class="fa fa-facebook-official fa-2x" style="color:royalblue;"  aria-hidden="true"></i></a>
-                     <a class="btn"  href="https://www.instagram.com/slbiltvatt/"><i class="fa fa-instagram fa-2x" style="color:black;" aria-hidden="true"></i></a>
+                     <a class="btn"  href="https://www.instagram.com/slecotvatt/"><i class="fa fa-instagram fa-2x" style="color:black;" aria-hidden="true"></i></a>
                 </section>
                 <!-- Section: Social media -->
                 <!-- Section: Copyright -->
-                <asp:Label CssClass="text-dark" ID="copyRightLbl" runat="server"></asp:Label>
+                <asp:Label CssClass="text-dark copyText" ID="copyRightLbl" runat="server"></asp:Label>
                 <!-- Section: Copyright -->
             </div>
             <!-- Grid container -->

@@ -74,9 +74,16 @@
                           <a href="#" class="nav-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/slecotvatt'});return false;">Boka tid</a>
                     </li>
 
-                    <li class="nav-item px-2 activeItem">
-                        <a class="nav-link " href="subscription.aspx">abonnemang</a>
-                    </li>
+                    <li class="nav-item dropdown activeItem">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Abonnemang
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="subscription.aspx">Se abonnemang</a>
+                         <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="https://billing.stripe.com/p/login/test_28o17GgZwf4HdqwbII">Hantera abonnemang</a>
+                     </div>
+                  </li>
 
                     <li class="nav-item px-2">
                         <a class="nav-link" href="aboutUs.aspx">Om oss</a>
@@ -112,26 +119,31 @@
              
          
  
-<stripe-pricing-table pricing-table-id="prctbl_1LuiyNIpBBGsl2gODCb5hBCx"
-publishable-key="pk_test_51LuKgeIpBBGsl2gOJvS2wcF0NKB8S5CBisTQwptOftsZ1Qm9dsY5xOPZ8wz8y2u5I38kVkcMzp4rrtYiZfAqryHs00dwyQLWFf">
-</stripe-pricing-table>
-             
-  
+        <stripe-pricing-table pricing-table-id="prctbl_1LuiyNIpBBGsl2gODCb5hBCx"
+            publishable-key="pk_test_51LuKgeIpBBGsl2gOJvS2wcF0NKB8S5CBisTQwptOftsZ1Qm9dsY5xOPZ8wz8y2u5I38kVkcMzp4rrtYiZfAqryHs00dwyQLWFf">
+        </stripe-pricing-table>
+           
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
  
         <!-- Footer -->
-        <footer class="footer-color text-center fdown">
+        <footer class="footer-color text-center fixed-bottom">
             <!-- Grid container -->
             <div class="container p-4">
 
                 <!-- Section: Social media -->
                 <section class="mb-4">
                      <a class="btn" href="https://www.facebook.com/SLBILTVATTAB"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
-                     <a class="btn"  href="https://www.instagram.com/slbiltvatt/"><i class="fa fa-instagram fa-2x" style="color:black;" aria-hidden="true"></i></a>
+                     <a class="btn"  href="https://www.instagram.com/slecotvatt/"><i class="fa fa-instagram fa-2x" style="color:black;" aria-hidden="true"></i></a>
                 </section>
                 <!-- Section: Social media -->
                 <!-- Section: Copyright -->
-                <asp:Label CssClass="text-dark" ID="copyRightLbl" runat="server"></asp:Label>
+                <asp:Label CssClass="text-dark copyText" ID="copyRightLbl" runat="server"></asp:Label>
                 <!-- Section: Copyright -->
             </div>
             <!-- Grid container -->

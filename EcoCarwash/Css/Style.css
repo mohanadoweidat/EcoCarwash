@@ -113,7 +113,8 @@ hr {
 
 #wlcp-aboutUs {
    /* font-size: 55px;*/
-   font-size:45px;
+   font-size:40px;
+   color:black
 }
 
  
@@ -149,10 +150,6 @@ hr {
     bottom: 82%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: black;
-    /*color: #fff;*/
-    /*text-shadow: 0 0 5px rgb(0 0 0 / 30%);*/
-    font-family: "Nunito",sans-serif;
     line-height: 30px;
     font-weight: bold;
 }
@@ -186,7 +183,7 @@ hr {
 }
 
 #f {
-    background-color: #e3f2fd;
+    background-color: #b7daf5;
 }
 
  
@@ -195,6 +192,12 @@ hr {
     bottom: 0;
     width: 100%;
 }
+
+
+.copyText {
+    font-size: large;
+}
+
 /*******************************/
 /********** Index CSS **********/
 /*******************************/
@@ -372,6 +375,13 @@ p{
         font-family: FontAwesome;
         content: "\f14b";
     }
+
+    #progressbar #payment:before {
+        font-family: FontAwesome;
+        content: "\f14b";
+    }
+
+
 
     #progressbar #confirm:before {
         font-family: FontAwesome;
@@ -749,99 +759,213 @@ p{
 /*******************************/
 
 
-.servies-taps{
-    margin-left:60px;
+/*Service taps*/
+
+
+.tabs {
+    /*  Taps will be at left side*/
+    /*  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flexl;*/
+    /*  Taps will be at the center*/
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
-
-/*******************************/
-/********** Media query **********/
-/*******************************/
-/* If the screen size is 600px wide or less, hide the element */
-@media screen and (max-width: 1000px) {
-    #wlcp {
-        font-size: 25px;
-    }
-
-
-    .centered-aboutUs {
-        position: absolute;
-        top: 12%;
-        left: 50%;
-        bottom: 85%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: #fff;
-        text-shadow: 0 0 5px rgb(0 0 0 / 30%);
-        font-family: "Nunito",sans-serif;
-        line-height: 30px;
+    .tabs label {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+        display: block;
+        padding: 1rem 2rem;
+        margin-right: 0.2rem;
+        cursor: pointer;
+        background: #b7daf5 /*#90CAF9*/;
         font-weight: bold;
+        -webkit-transition: background ease 0.4s;
+        transition: background ease 0.4s;
     }
 
-
-    #buttonsGroup {
-        margin-left: 15px;
+    .tabs .tab {
+        -webkit-box-ordinal-group: 100;
+        -webkit-order: 99;
+        -ms-flex-order: 99;
+        order: 99;
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        width: 100%;
+        display: none;
+        padding: 1rem;
+        /*background: #e3f2fd;*/
     }
 
-    #svgLogo {
-        margin-left: 15px;
-    }
-
-
-    
-
-}
-
-
-/* If the screen size is 600px wide or less, hide the element */
-@media screen and (max-width: 450px) {
-    #wlcp {
-        font-size: 20px;
-        margin: -150px 0px 0px 0px;
-    }
-
-    #infop{
-        font-size:12px;
-    }
-
-
-    .centered-aboutUs {
+    .tabs input[type="radio"] {
         position: absolute;
-        top: 12%;
-        left: 50%;
-        bottom: 80%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: #fff;
-        text-shadow: 0 0 5px rgb(0 0 0 / 30%);
-        font-family: "Nunito",sans-serif;
-        line-height: 30px;
-        font-weight: bold;
-        
+        opacity: 0;
     }
 
-       
+        .tabs input[type="radio"]:checked + label {
+            transition: .4s;
+            background: #e3f2fd;
+            border-radius: 5px;
+             
+        }
+
+            .tabs input[type="radio"]:checked + label + .tab {
+                display: block;
+            }
 
 
-    
-    #wlcp-aboutUs {
-        font-size:15px;
-        margin: 20px 0px 0px 0px;
+@media (max-width: 45em) {
 
-        
+    .tabs .tab, .tabs label {
+        -webkit-box-ordinal-group: NaN;
+        -webkit-order: initial;
+        -ms-flex-order: initial;
+        order: initial;
     }
 
-     
-    #buttonsGroup{
-       margin-left:15px;
+    .tabs label {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 0.2rem;
     }
-
-    #svgLogo {
-        margin-left: 15px;
-    }
-
-   
 }
+
+
+
+    /*Service taps content table*/
+
+    .serviceTable {
+        width: 20%;
+        border-spacing: 10px;
+    }
+    /*******************************/
+    /********** Media query **********/
+    /*******************************/
+    /* If the screen size is 1000px wide or less */
+    @media screen and (max-width: 1000px) {
+        #wlcp {
+            font-size: 25px;
+        }
+
+
+        .centered-aboutUs {
+            position: absolute;
+            top: 12%;
+            left: 50%;
+            bottom: 85%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+        }
+
+        #l {
+            width: 90%;
+        }
+
+
+
+        #buttonsGroup {
+            margin-left: 15px;
+        }
+
+        #svgLogo {
+            margin-left: 15px;
+        }
+
+        .copyText {
+            font-size: larger;
+        }
+
+
+        .serviceLbl {
+            font-size: xx-large;
+        }
+
+        .serviceTable {
+            width: 50%;
+        }
+    }
+
+
+
+
+
+    /* If the screen size is 450 wide or less */
+    @media screen and (max-width: 450px) {
+        #wlcp {
+            font-size: 20px;
+            margin: -150px 0px 0px 0px;
+        }
+
+        #infop {
+            font-size: 12px;
+        }
+
+
+        .centered-aboutUs {
+            position: absolute;
+            top: 12%;
+            left: 50%;
+            bottom: 80%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+        }
+
+
+        #wlcp-aboutUs {
+            font-size: x-large;
+            margin: 20px 0px 0px 0px;
+        }
+
+
+        #l {
+            width: 90%;
+        }
+
+
+        #wlcp-homePage {
+            font-size: x-large;
+        }
+
+
+
+
+        #buttonsGroup {
+            margin-left: 15px;
+        }
+
+        #svgLogo {
+            margin-left: 15px;
+        }
+
+        .copyText {
+            font-size: smaller;
+        }
+
+
+
+        .serviceLbl {
+            font-size: x-large;
+        }
+
+        .serviceTable {
+            width: 100%;
+        }
+    }
  
 
  

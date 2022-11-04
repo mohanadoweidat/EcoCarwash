@@ -30,13 +30,23 @@
 
 
 
+
+
+
 </head>
 <body>
     <form id="form1" runat="server">
         
+
+
+         
+      
+
+      
+     
             <!-- Navbar -->
         <nav class="navbar fixed-top navbar-expand-lg  navbar navbar-light" id="navbar">
-             
+
             <center>
                 <a href="index.aspx">
                     <svg id="svgLogo" width="232.83" height="18.853" viewBox="0 0 232.83 18.853" xmlns="http://www.w3.org/2000/svg">
@@ -58,15 +68,22 @@
                     <li class="nav-item px-2 activeItem">
                         <a class="nav-link" href="Services.aspx">Våra tjänster</a>
                     </li>
-                     
+
                     <li class="nav-item px-2">
-                         <a href="#" class="nav-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/slecotvatt'});return false;">Boka tid</a>
+                        <a href="#" class="nav-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/slecotvatt'});return false;">Boka tid</a>
                     </li>
 
 
-                      <li class="nav-item px-2 ">
-                        <a class="nav-link " href="subscription.aspx">abonnemang</a>
-                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Abonnemang
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="subscription.aspx">Se abonnemang</a>
+                         <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="https://billing.stripe.com/p/login/test_28o17GgZwf4HdqwbII">Hantera abonnemang</a>
+                     </div>
+                  </li>
 
 
                     <li class="nav-item px-2">
@@ -76,12 +93,11 @@
                     <li class="nav-item px-2">
                         <a class="nav-link" href="contactUs.aspx">Kontakta oss</a>
                     </li>
-                     
+
                 </ul>
 
                 <form class="form-inline my-2 my-lg-0">
-                    
-                 </form>
+                </form>
             </div>
         </nav>
             
@@ -94,272 +110,262 @@
           </div>
         <br />
 
+ 
 
-         
-        <!-- Taps buttons -->
-
-        <div class="taps-section">
-            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Biltvätt</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Sängtvätt</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Sofftvätt</button>
-                </li>
-
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="sss-tab" data-bs-toggle="tab" data-bs-target="#sss-tab-pane" type="button" role="tab" aria-controls="sss-tab-pane" aria-selected="false">Mattvätt</button>
-                </li>
-
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="boat-tab" data-bs-toggle="tab" data-bs-target="#boat-tab-pane" type="button" role="tab" aria-controls="boat-tab-pane" aria-selected="false">Båttvätt</button>
-                </li>
-             </ul>
-
-
-
-            <!-- Taps content -->
-            <div class="servies-taps">
-
-
-                <center>
-                    <div class="tab-content" id="myTabContent">
-
-                        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-
-                            <!-- Biltvätt -->
-                            <table width="20%" cellspacing="2px" style="border-spacing: 10px">
-                                <br />
-                                <th>
-                                    <h2><strong>Typ av tjänst:</strong></h2>
-                                </th>
-                                <th>
-                                    <h2><strong>Pris:</strong></h2>
-                                </th>
-                                <tr>
-                                    <td>
-                                        <%
-
-                                            string[] serviceData = { "ServiceName", "ServicePrice" };
-                                            string[] columnDb = { "ServiceCatgName" };
-                                            string[] cat1 = { "Biltvätt" };
-
-                                            var serviceNameCat1 = GetDBValueWithCondition("priceInfo", serviceData[0], columnDb, cat1);
-                                            foreach (var name in serviceNameCat1)
-                                            {
-                                                if (name != null)
-                                                {
-                                                    Response.Write("<h3> " + name + "</h3>");
-                                                }
-                                            }
-
-                                        %>
-                                    </td>
-                                    <td>
-                                        <%
-
-                                            var servicePriceCat1 = GetDBValueWithCondition("priceInfo", serviceData[1], columnDb, cat1);
-                                            foreach (var price in servicePriceCat1)
-                                            {
-                                                if (price != null)
-                                                {
-                                                    Response.Write("<h3> " + price + "kr</h3>");
-                                                }
-                                            }
-
-                                        %>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-
-
-                        <!--Säng -->
-                        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                            <table width="20%" cellspacing="2px" style="border-spacing: 10px" align="center">
-                                <br />
-                                <th>
-                                    <h2><strong>Typ av tjänst:</strong></h2>
-                                </th>
-                                <th>
-                                    <h2><strong>Pris:</strong></h2>
-                                </th>
-
-                                <tr>
-                                    <td>
-                                        <%
-                                            string[] cat2 = { "Sängtvätt" };
-
-                                            var serviceNameCat2 = GetDBValueWithCondition("priceInfo", serviceData[0], columnDb, cat2);
-                                            foreach (var name in serviceNameCat2)
-                                            {
-                                                if (name != null)
-                                                {
-                                                    Response.Write("<h3> " + name + "</h3>");
-                                                }
-                                            }
-
-                                        %>
-                                    </td>
-                                    <td>
-                                        <%
-
-                                            var servicePriceCat2 = GetDBValueWithCondition("priceInfo", serviceData[1], columnDb, cat2);
-                                            foreach (var price in servicePriceCat2)
-                                            {
-                                                if (price != null)
-                                                {
-                                                    Response.Write("<h3> " + price + "kr</h3>");
-                                                }
-                                            }
-
-                                        %>
-                                    </td>
-                                </tr>
-                            </table>
-
-                        </div>
-                        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-                            <!--Soffa -->
-                            <table width="20%" cellspacing="2px" style="border-spacing: 10px" align="center">
-                                <br />
-                                <th>
-                                    <h2><strong>Typ av tjänst:</strong></h2>
-                                </th>
-                                <th>
-                                    <h2><strong>Pris:</strong></h2>
-                                </th>
-
-                                <tr>
-                                    <td>
-                                        <%
-                                            string[] cat3 = { "Sofftvätt" };
-
-                                            var serviceNameCat3 = GetDBValueWithCondition("priceInfo", serviceData[0], columnDb, cat3);
-                                            foreach (var name in serviceNameCat3)
-                                            {
-                                                if (name != null)
-                                                {
-                                                    Response.Write("<h3> " + name + "</h3>");
-                                                }
-                                            }
-
-                                        %>
-                                    </td>
-                                    <td>
-                                        <%
-
-                                            var servicePriceCat3 = GetDBValueWithCondition("priceInfo", serviceData[1], columnDb, cat3);
-                                            foreach (var price in servicePriceCat3)
-                                            {
-                                                if (price != null)
-                                                {
-                                                    Response.Write("<h3> " + price + "kr</h3>");
-                                                }
-                                            }
-
-                                        %>
-                                    </td>
-                                </tr>
-
-                            </table>
-                        </div>
-                        <div class="tab-pane fade" id="sss-tab-pane" role="tabpanel" aria-labelledby="sss-tab" tabindex="0">
-                            <!--Matt -->
-                            <table width="20%" cellspacing="2px" style="border-spacing: 10px" align="center">
-                                <br />
-                                <th>
-                                    <h2><strong>Typ av tjänst:</strong></h2>
-                                </th>
-                                <th>
-                                    <h2><strong>Pris:</strong></h2>
-                                </th>
-
-                                <tr>
-                                    <td>
-                                        <%
-                                            string[] cat4 = { "Mattvätt" };
-
-                                            var serviceNameCat4 = GetDBValueWithCondition("priceInfo", serviceData[0], columnDb, cat4);
-                                            foreach (var name in serviceNameCat4)
-                                            {
-                                                if (name != null)
-                                                {
-                                                    Response.Write("<h3> " + name + "</h3>");
-                                                }
-                                            }
-
-                                        %>
-                                    </td>
-                                    <td>
-                                        <%
-
-                                            var servicePriceCat4 = GetDBValueWithCondition("priceInfo", serviceData[1], columnDb, cat4);
-                                            foreach (var price in servicePriceCat4)
-                                            {
-                                                if (price != null)
-                                                {
-                                                    Response.Write("<h3> " + price + "kr/m²</h3>");
-                                                }
-                                            }
-
-                                        %>
-                                    </td>
-                                </tr>
-
-
-
-                            </table>
-                        </div>
-                        <div class="tab-pane fade" id="boat-tab-pane" role="tabpanel" aria-labelledby="boat-tab" tabindex="0">
-                            <!--Båt -->
-                            <table width="20%" cellspacing="2px" style="border-spacing: 10px" align="center">
-                                <br />
-                                <th>
-                                    <h2><strong>Typ av tjänst:</strong></h2>
-                                </th>
-                                <th>
-                                    <h2><strong>Pris:</strong></h2>
-                                </th>
-
-                                <tr>
-                                    <td>
-                                        <h5>Båttvätt överenskommelse.</h5>
-                                    </td>
-                                    <td>
-                                        <button runat="server" id="contactUsBoatBtn" class="btn btn-outline-primary btn-sm">Kontakta oss</button></td>
-                                </tr>
-
-
-
-                            </table>
-                        </div>
-
-                    </div>
-
-                </center>
-            </div>
-            
+ <br />
+        <div class="text-center">
+              <a href="#" class="btn btn-primary btn-lg" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/slecotvatt'});return false;">Boka tid</a>
         </div>
+       
+        
+        <br />
+ <center>
+  <div class="tabs">
+       
+
+
+
+  <input type="radio" name="tabs" id="tabone" checked="checked" />
+  <label for="tabone">Biltvätt</label>
+  <div class="tab">
+      <!-- Biltvätt -->
+      <table cellspacing="2px" class="serviceTable">
+          <br />
+          <th>
+              <h2 class="serviceLbl"><strong>Typ av tjänst:</strong></h2>
+          </th>
+          <th>
+              <h2 class="serviceLbl"><strong>Pris:</strong></h2>
+          </th>
+           
+          <tr>
+              <td>
+                  <%
+
+                      string[] serviceData = { "ServiceName", "ServicePrice" };
+                      string[] columnDb = { "ServiceCatgName" };
+                      string[] cat1 = { "Biltvätt" };
+
+                      var serviceNameCat1 = GetDBValueWithCondition("priceInfo", serviceData[0], columnDb, cat1);
+                      foreach (var name in serviceNameCat1)
+                      {
+                          if (name != null)
+                          {
+                              Response.Write("<h4> " + name + "</h4>");
+                          }
+                      }
+
+                  %>
+              </td>
+              <td>
+                  <%
+
+                      var servicePriceCat1 = GetDBValueWithCondition("priceInfo", serviceData[1], columnDb, cat1);
+                      foreach (var price in servicePriceCat1)
+                      {
+                          if (price != null)
+                          {
+                              Response.Write("<h4> " + price + "kr</h4>");
+                          }
+                      }
+
+                  %>
+              </td>
+
+              
+          </tr>
+      </table>
+
+    
+  </div>
+
+
+  <input type="radio" name="tabs" id="tabtwo"/>
+  <label for="tabtwo">Sängtvätt</label>
+  <div class="tab">
+      <table cellspacing="2px" class="serviceTable">
+          <br />
+          <th>
+              <h2 class="serviceLbl"><strong>Typ av tjänst:</strong></h2>
+          </th>
+          <th>
+              <h2 class="serviceLbl"><strong>Pris:</strong></h2>
+          </th>
+
+          <tr>
+              <td>
+                  <%
+                      string[] cat2 = { "Sängtvätt" };
+
+                      var serviceNameCat2 = GetDBValueWithCondition("priceInfo", serviceData[0], columnDb, cat2);
+                      foreach (var name in serviceNameCat2)
+                      {
+                          if (name != null)
+                          {
+                             Response.Write("<h4> " + name + "</h4>");
+                          }
+                      }
+
+                  %>
+              </td>
+              <td>
+                  <%
+
+                      var servicePriceCat2 = GetDBValueWithCondition("priceInfo", serviceData[1], columnDb, cat2);
+                      foreach (var price in servicePriceCat2)
+                      {
+                          if (price != null)
+                          {
+                              Response.Write("<h4> " + price + "kr</h4>");
+                          }
+                      }
+
+                  %>
+              </td>
+          </tr>
+      </table>
+  </div>
+
+
+  <input type="radio" name="tabs" id="tabthree"/>
+  <label for="tabthree">Sofftvätt</label>
+  <div class="tab">
+    <table cellspacing="2px" class="serviceTable">
+          <br />
+          <th>
+              <h2 class="serviceLbl"><strong>Typ av tjänst:</strong></h2>
+          </th>
+          <th>
+              <h2 class="serviceLbl"><strong>Pris:</strong></h2>
+          </th>
+
+          <tr>
+              <td>
+                  <%
+                      string[] cat3 = { "Sofftvätt" };
+
+                      var serviceNameCat3 = GetDBValueWithCondition("priceInfo", serviceData[0], columnDb, cat3);
+                      foreach (var name in serviceNameCat3)
+                      {
+                          if (name != null)
+                          {
+                             Response.Write("<h4> " + name + "</h4>");
+                          }
+                      }
+
+                  %>
+              </td>
+              <td>
+                  <%
+
+                      var servicePriceCat3 = GetDBValueWithCondition("priceInfo", serviceData[1], columnDb, cat3);
+                      foreach (var price in servicePriceCat3)
+                      {
+                          if (price != null)
+                          {
+                              Response.Write("<h4> " + price + "kr</h4>");
+                          }
+                      }
+
+                  %>
+              </td>
+          </tr>
+
+      </table>
+  </div>
+
+
+  <input type="radio" name="tabs" id="tabfour"/>
+  <label for="tabfour">Mattvätt</label>
+  <div class="tab">
+     <table cellspacing="2px" class="serviceTable">
+          <br />
+          <th>
+              <h2 class="serviceLbl"><strong>Typ av tjänst:</strong></h2>
+          </th>
+          <th>
+              <h2 class="serviceLbl"><strong>Pris:</strong></h2>
+          </th>
+
+          <tr>
+              <td>
+                  <%
+                      string[] cat4 = { "Mattvätt" };
+
+                      var serviceNameCat4 = GetDBValueWithCondition("priceInfo", serviceData[0], columnDb, cat4);
+                      foreach (var name in serviceNameCat4)
+                      {
+                          if (name != null)
+                          {
+                             Response.Write("<h4> " + name + "</h4>");
+                          }
+                      }
+
+                  %>
+              </td>
+              <td>
+                  <%
+
+                      var servicePriceCat4 = GetDBValueWithCondition("priceInfo", serviceData[1], columnDb, cat4);
+                      foreach (var price in servicePriceCat4)
+                      {
+                          if (price != null)
+                          {
+                              Response.Write("<h4> " + price + "kr/m²</h4>");
+                          }
+                      }
+
+                  %>
+              </td>
+          </tr>
+
+
+
+      </table>
+  </div>
+
+
+  <input type="radio" name="tabs" id="tabfive"/>
+  <label for="tabfive">Båttvätt</label>
+  <div class="tab">
+    <h3><strong>Båttvätt överenskommelse</strong></h3>
+      <button runat="server" id="contactUsBoatBtn" class="btn btn-outline-primary btn-sm">Kontakta oss</button> 
+      <%--<table width="20%" cellspacing="2px" style="border-spacing: 10px" align="center">
+          <br />
+          <th>
+              <h2><strong>Typ av tjänst:</strong></h2>
+          </th>
+          <th>
+              <h2><strong>Pris:</strong></h2>
+          </th>
+
+          <tr>
+              <td>
+                  <h5>Båttvätt överenskommelse.</h5>
+              </td>
+              <td>
+                  <button runat="server" id="contactUsBoatBtn" class="btn btn-outline-primary btn-sm">Kontakta oss</button></td>
+          </tr>
+        </table>--%>
+  </div>
+  </div>
+
+      
+
+  </center>
+
+        
+          
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
          <br />
         
-         
-
-
-        <div class="text-center">
-              <a href="#" class=" btn btn-primary" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/slecotvatt'});return false;">Boka tid</a>
-        </div>
-            
-         
-
-
-
-       
          <!-- Footer -->
-        <footer class="footer-color text-center fdown">
+       <footer class="footer-color text-center fixed-bottom">
             
             <!-- Grid container -->
             <div class="container p-4">
@@ -367,21 +373,23 @@
                  <!-- Section: Social media -->
                 <section class="mb-4">
                      <a class="btn" href="https://www.facebook.com/SLBILTVATTAB"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
-                     <a class="btn"  href="https://www.instagram.com/slbiltvatt/"><i class="fa fa-instagram fa-2x" style="color:black;" aria-hidden="true"></i></a>
+                    <a class="btn"  href="https://www.instagram.com/slecotvatt/"><i class="fa fa-instagram fa-2x" style="color:black;" aria-hidden="true"></i></a>
                 </section>
                 <!-- Section: Social media -->
                 <!-- Section: Copyright -->
-                <asp:Label CssClass="text-dark" ID="copyRightLbl" runat="server"></asp:Label>
+                <asp:Label CssClass="text-dark copyText" ID="copyRightLbl" runat="server"></asp:Label>
                 <!-- Section: Copyright -->
             </div>
             <!-- Grid container -->
-        </footer>
+        </footer> 
 
 
+           
+           
 
-         <!-- Footer -->
-          <%--<!-- Footer -->
-        <footer class="page-footer font-small darken-3 fixed-bottom" id="f">
+        <%-- <!-- Footer -->
+          <!-- Footer -->
+        <footer class="" >
             <!-- Footer Elements -->
             <div class="container">
                 <!-- Grid row-->
@@ -389,21 +397,17 @@
                     <center>
                         <br>
                         <!-- Facebook -->
-                        <a class="fb-ic btn">
-                            <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
-                        </a>
+                         <a class="btn" href="https://www.facebook.com/SLBILTVATTAB"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
 
                         <!--Instagram-->
-                        <a class="ins-ic btn">
-                            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
-                        </a>
+                        <a class="btn"  href="https://www.instagram.com/slecotvatt/"><i class="fa fa-instagram fa-2x" style="color:black;" aria-hidden="true"></i></a>
                     </center>
                 </div>
                 <!-- Grid row-->
             </div>
-            <!-- Footer Elements -->--%>
+            <!-- Footer Elements -->
              <!-- Copyright -->
-           <%-- <div class="footer-copyright text-center py-3">
+            <div class="footer-copyright text-center py-3">
                 <%
                     string date = DateTime.Now.Year.ToString();
                     copyRightLbl.Text = "© " + date + " Alla rättigheter förbehållna | Eco Biltvätt AB";
@@ -415,6 +419,8 @@
      <!-- Footer -->
 
 
+
+            
             
     </form>
 

@@ -72,10 +72,20 @@
                         <a href="#" class="nav-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/slecotvatt'});return false;">Boka tid</a>
                     </li>
 
-                    <li class="nav-item px-2">
-                        <a class="nav-link " href="subscription.aspx">abonnemang</a>
-                    </li>
+                     
 
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Abonnemang
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="subscription.aspx">Se abonnemang</a>
+                         <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="https://billing.stripe.com/p/login/test_28o17GgZwf4HdqwbII">Hantera abonnemang</a>
+                     </div>
+                  </li>
+
+                      
                     <li class="nav-item px-2">
                         <a class="nav-link" href="aboutUs.aspx">Om oss</a>
                     </li>
@@ -109,7 +119,7 @@
          <div class="bg"></div>
           <div class="centered">
                   <p id="wlcp">Välkommen till S&L ECO tvätt</p>
-                 <p id="infop">Biltvätt & sängtvätt & soffortvätt & mattortvätt </p>
+                 <p id="infop">Biltvätt & sängtvätt & sofftvätt & mattvätt </p>
              </div>
          <br />
 
@@ -119,7 +129,7 @@
               <br />
               <br />
               <div id="l" class="bg-primary">
-                   <h1>Våra tjänster</h1>
+                   <h1 id="wlcp-homePage">Våra tjänster</h1>
               </div>
           </center>
           <br /> 
@@ -168,7 +178,7 @@
                                 <div class="card">
                                     <img class="card-img-top" src="Images/sofa.png" alt="Card image cap" />
                                     <div class="card-body">
-                                        <h5 class="card-title">Soffortvätt</h5>
+                                        <h5 class="card-title">Sofftvätt</h5>
                                          <p class="card-text">
                                            Vi kommer till dig och tvättar din soffa hos dig i hela Skåne och Halland.
                                          </p>
@@ -184,7 +194,7 @@
                                 <div class="card">
                                     <img class="card-img-top" src="Images/carpet.png" alt="Card image cap" />
                                     <div class="card-body">
-                                        <h5 class="card-title">Mattortvätt</h5>
+                                        <h5 class="card-title">Mattvätt</h5>
                                          <p class="card-text">
                                            Vi kommer till dig och tvättar din matta hos dig i hela Skåne och Halland.
                                          </p>
@@ -215,7 +225,7 @@
                     <ul id="progressbar">
                         <li class="active" id="service"><strong>Välj en tjänst</strong></li>
                         <li id="timeBooking"><strong>Välj en ledig tid</strong></li>
-                        <li id="information"><strong>Fyll i dina uppgifter</strong></li>
+                        <li id="information"><strong>Fyll i dina uppgifter och betala</strong></li>
                         <li id="confirm"><strong>Klar</strong></li>
                     </ul>
                     <div class="progress">
@@ -262,11 +272,12 @@
                             		<h2 class="steps">Steg 3 - 4</h2>
                             	</div>
                             </div>
-                            <p>Fyll i dina kontaktuppgifter. Har du andra funderingar över besöket så skriver du detta.</p>
+                            <p>Fyll i dina kontaktuppgifter och betala, du kan antigen betala med kort eller klarna. <br />Har du andra funderingar över besöket så skriver du detta.</p>
                         </div>
                         <input type="button" name="next" class="next action-button" value="Nästa"/>
                         <input type="button" name="previous" class="previous action-button-previous" value="Föregående steg"/>
                     </fieldset>
+                    
                     <fieldset>
                         <div class="form-card">
                         	<div class="row">
@@ -311,11 +322,11 @@
                 <!-- Section: Social media -->
                 <section class="mb-4">
                      <a class="btn" href="https://www.facebook.com/SLBILTVATTAB"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
-                     <a class="btn"  href="https://www.instagram.com/slbiltvatt/"><i class="fa fa-instagram fa-2x" style="color:black;" aria-hidden="true"></i></a>
+                     <a class="btn"  href="https://www.instagram.com/slecotvatt/"><i class="fa fa-instagram fa-2x" style="color:black;" aria-hidden="true"></i></a>
                 </section>
                 <!-- Section: Social media -->
                 <!-- Section: Copyright -->
-                <asp:Label CssClass="text-dark" ID="copyRightLbl" runat="server"></asp:Label>
+                <asp:Label CssClass="text-dark copyText" ID="copyRightLbl" runat="server"></asp:Label>
                 <!-- Section: Copyright -->
             </div>
             <!-- Grid container -->
