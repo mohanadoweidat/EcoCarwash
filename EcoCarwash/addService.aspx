@@ -26,7 +26,7 @@
              <div class="container-fluied">
                  <div class="gridView-section">
                      
-                <h1>Lägg till en tjänst</h1>
+                <h1 class="grid_lbl">Lägg till en tjänst</h1>
                      <br />
                       <div class="contact-form">
                              <form>
@@ -45,27 +45,24 @@
                                 </div>
 
                                  
-
                                  <asp:Label ID="InfoLbl" runat="server"></asp:Label>
-
-                                  <p class="help-block text-danger"></p>
+                                   <p class="help-block text-danger"></p>
                                     <%--btn btn-primary--%>
                                     <button class="file-upload-btn" runat="server" type="submit" id="addServiceBtn">Lägg till</button>
                              </form>
                         </div>
                   </div>
-                 
                   </div>
 
 
 
-             
+             <div class="container-fluied">
              <!--Show Services-->
                  <div class="gridView-section">
-                         <h1>Ta bort en tjänst</h1>
+                         <h1 class="grid_lbl">Ta bort en tjänst</h1>
                      <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                          <ContentTemplate>
-                             <asp:GridView ID="serviceGrid" OnRowDeleting="serviceGrid_RowDeleting"  AutoGenerateColumns="false"  runat="server" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="1px" CellSpacing="10" CellPadding="10" GridLines="Horizontal" Width="60%">
+                             <asp:GridView CssClass="serviceGrid" ID="serviceGrid" OnRowDeleting="serviceGrid_RowDeleting"  AutoGenerateColumns="false"  runat="server" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="1px" CellSpacing="10" CellPadding="10" GridLines="Horizontal">
                                  
 
                            <FooterStyle BackColor="White" ForeColor="#333333"></FooterStyle>
@@ -111,7 +108,7 @@
                                      </asp:TemplateField>
 
 
-                                       <asp:TemplateField HeaderText="Tjänstens namn" ItemStyle-HorizontalAlign="Center" >
+                                       <asp:TemplateField HeaderText="Tjänstens namn"  ItemStyle-HorizontalAlign="Center" >
                                          <ItemTemplate>
                                               
                                              <asp:Label ID="serviceNameLbl" runat="server" Text='<%#Eval("ServiceName") %>'></asp:Label>
@@ -130,11 +127,11 @@
                          </ContentTemplate>
                      </asp:UpdatePanel>
                 </div>
-
-
+                  </div>
 
 
 
          </center>
+         <br />
           </section>
 </asp:Content>

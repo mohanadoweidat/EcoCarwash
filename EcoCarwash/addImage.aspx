@@ -22,7 +22,7 @@
             <div class="container-fluied">
                    <!--File upload-->
                     <div class="file-upload">
-                        <h1>Lägg till  en bild</h1>
+                        <h1 class="grid_lbl">Lägg till  en bild</h1>
 
                         <div class="image-upload-wrap">
                             <input class="file-upload-input" runat="server" id="imgUploader" type='file' onchange="readURL(this);" accept="image/*" />
@@ -51,7 +51,7 @@
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
              <!--Show Images-->
                  <div class="gridView-section">
-                         <h1>Ta bort en bild</h1>
+                         <h1 class="grid_lbl">Ta bort en bild</h1>
                      <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                          <ContentTemplate>
                              <asp:GridView ID="ImgGrid"  AutoGenerateColumns="false" OnRowDataBound="ImgGrid_RowDataBound" OnRowDeleting="ImgGrid_RowDeleting" runat="server" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="1px" CellSpacing="10" CellPadding="10" GridLines="Horizontal" Width="100%">
@@ -125,7 +125,10 @@
                 </div>
  
         </center>
+           <br />
     </section>
+
+  
      <!--JS script to show the selected image.-->
      <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
       

@@ -33,3 +33,12 @@ function sendMessage() {
         'success'
     )
 }
+
+
+function changePrice() {
+    Swal.fire(
+        'Obs!',
+        'Priser har ändrats!',
+        'success'
+    )
+}

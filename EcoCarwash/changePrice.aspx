@@ -9,11 +9,12 @@
             border-radius:5px;
         }
 
-
-        .editbuttons{
+         .editbuttons{
            margin:10px;
         }
     </style>
+
+
 
       
  </asp:Content>
@@ -26,12 +27,11 @@
             <br />
 
             <div class="container">
-                <div class="gridView-section">
-                         <h1>Ändra tjänstpris</h1>
-                    <asp:GridView  ID="priceGrid" OnRowCancelingEdit="serviceGrid_RowCancelingEdit" OnRowEditing="serviceGrid_RowEditing" 
-                        OnRowUpdating="serviceGrid_RowUpdating"
+                <div class="priceGridView-section">
+                         <h1 class="grid_lbl">Tjänster</h1> <%-- table table-responsive table-striped--%>
+                    <asp:GridView CssClass="serviceGrid"  ID="priceGrid" 
                         AutoGenerateColumns="false"  runat="server" BackColor="White" BorderColor="#336666" 
-                        BorderStyle="Double" BorderWidth="1px" CellSpacing="10" CellPadding="10" GridLines="Both" Width="100%">
+                        BorderStyle="Double" BorderWidth="1px" CellSpacing="10" CellPadding="10" GridLines="Both">
                                  
 
                            <FooterStyle BackColor="White" ForeColor="#333333"></FooterStyle>
@@ -57,13 +57,9 @@
                                      Det finns inga tjänster inlagda!
                                 </center>
                                   </EmptyDataTemplate>
-
-
-                                
+                         
                                  <Columns>
-                                  
-
-                                       <asp:TemplateField HeaderText="Tjänst" ItemStyle-HorizontalAlign="Center" >
+                                         <asp:TemplateField HeaderText="Tjänst" ItemStyle-HorizontalAlign="Center" >
                                          <ItemTemplate>
                                              <asp:Label ID="serviceNameLbl" runat="server" Text='<%#Eval("ServiceName") %>'></asp:Label>
                                          </ItemTemplate>
@@ -81,23 +77,49 @@
                                           </ItemTemplate>
                                      </asp:TemplateField>
 
-
-                                     <asp:CommandField  ShowEditButton="true" ControlStyle-CssClass="editbuttons" />
-
-
                                     
-
-
-
-
-
-
-                                 </Columns>
-
-                             </asp:GridView>
-                     
-                </div>
+                                   </Columns>
+                      </asp:GridView>
+                 </div>
             </div>
         </center>
+         <br />
+
+
+        <center>
+         <div class="container">
+                 <div class="priceGridView-section">
+                     
+                <h1 class="grid_lbl">Ändra pris</h1>
+                     <br />
+                      <div class="contact-form">
+                             <form>
+                                 <div class="control-group">
+                                    <asp:DropDownList ID="servicePriceList" CssClass="form-control" runat="server"></asp:DropDownList>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                 <div class="control-group">
+                                     <input type="number" min="100" step="50" runat="server" class="form-control" id="newPrice" placeholder="Tjänstens nya pris"  data-validation-required-message="Vänligen fyll i fältet" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+
+                                 <asp:Label ID="successMsg" runat="server"></asp:Label>
+
+                                 
+                                 <asp:Label ID="InfoLbl" runat="server"></asp:Label>
+                                   <p class="help-block text-danger"></p>
+                                    <%--btn btn-primary--%>
+                                    <button class="file-upload-btn" runat="server" type="submit" id="changePriceBtn">Ändra</button>
+                             </form>
+                        </div>
+                  </div>
+                  </div>
+            </center>
+         <br />
     </section>
+
+   
+     
 </asp:Content>

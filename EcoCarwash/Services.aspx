@@ -113,18 +113,16 @@
  
 
  <br />
-        <div class="text-center">
+      <%--  <div class="text-center">
               <a href="#" class="btn btn-primary btn-lg" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/slecotvatt'});return false;">Boka tid</a>
-        </div>
+        </div>--%>
        
         
         <br />
  <center>
   <div class="tabs">
        
-
-
-
+ 
   <input type="radio" name="tabs" id="tabone" checked="checked" />
   <label for="tabone">Biltvätt</label>
   <div class="tab">
@@ -351,7 +349,9 @@
   </div>
 
       
-
+        <div class="text-center">
+              <a href="#" class="btn btn-primary btn-lg" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/slecotvatt'});return false;">Boka tid</a>
+        </div>
   </center>
 
         
@@ -363,6 +363,7 @@
          <br />
          <br />
          <br />
+        
         
          <!-- Footer -->
        <footer class="footer-color text-center fixed-bottom">
@@ -383,54 +384,15 @@
             <!-- Grid container -->
         </footer> 
 
+         
+       
 
-           
-           
-
-        <%-- <!-- Footer -->
-          <!-- Footer -->
-        <footer class="" >
-            <!-- Footer Elements -->
-            <div class="container">
-                <!-- Grid row-->
-                <div class="row">
-                    <center>
-                        <br>
-                        <!-- Facebook -->
-                         <a class="btn" href="https://www.facebook.com/SLBILTVATTAB"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
-
-                        <!--Instagram-->
-                        <a class="btn"  href="https://www.instagram.com/slecotvatt/"><i class="fa fa-instagram fa-2x" style="color:black;" aria-hidden="true"></i></a>
-                    </center>
-                </div>
-                <!-- Grid row-->
-            </div>
-            <!-- Footer Elements -->
-             <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">
-                <%
-                    string date = DateTime.Now.Year.ToString();
-                    copyRightLbl.Text = "© " + date + " Alla rättigheter förbehållna | Eco Biltvätt AB";
-                %>
-                <asp:Label CssClass="text-dark" ID="copyRightLbl" runat="server"></asp:Label>
-            </div>
-            <!-- Copyright -->
-         </footer>--%>
-     <!-- Footer -->
-
-
-
-            
-            
-    </form>
+      </form>
 
      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
-      
-
-</body>
+ </body>
 </html>

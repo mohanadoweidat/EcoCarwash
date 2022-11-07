@@ -32,6 +32,11 @@
       <!-- Js -->
     <script src="Js/AdminJS.js"></script>
 
+
+      <%--Sweetalert2--%>
+   <script src="Js/InfoMessages.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
    
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>

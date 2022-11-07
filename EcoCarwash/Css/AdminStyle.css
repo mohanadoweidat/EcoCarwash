@@ -532,7 +532,22 @@
 }
 
 
- 
+.serviceGrid {
+    width: 90%;
+}
+
+.priceGridView-section {
+    background-color: #ffffff;
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 20px;
+    border: 4px solid #11101D;
+    position: relative;
+}
+
+
+
 #content-bg {
     background-color: #e3f2fd;
     /* #0e8dbc*/
@@ -550,6 +565,9 @@
     padding:10px;
     border-radius:19px;
 }
+
+
+
 
 
 /***Media queries***/
@@ -579,7 +597,20 @@
         width: 62%;
     }
 
-       
+    .grid_lbl {
+        font-size: xx-large !important;
+    }
+
+
+    .priceGridView-section {
+        width: 100%;
+    }
+
+    .home-section {
+        min-height: 130vh;
+    }
+
+        
 }
 
 
@@ -619,6 +650,31 @@
     }
 
 
+
+    .remove-image_grid {
+        width: 50%;
+        height:20%;
+    }
+
+
+    .grid_lbl {
+        font-size: x-large !important;
+    }
+
+
+
+    .priceGridView-section {
+         
+        width: 90%;
+        
+    }
+
+    .home-section {
+         min-height: 120vh;
+     }
+   
+
+    
      
 }
 
