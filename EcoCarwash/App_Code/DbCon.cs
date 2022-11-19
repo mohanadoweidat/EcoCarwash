@@ -10,7 +10,7 @@ namespace EcoCarwash.App_Code
 {
     public class DbCon
     {
-        public string con = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
+        public string con = ConfigurationManager.ConnectionStrings["Dbconnections_New"].ConnectionString;
 
          
         public object[] GetDBValue(string tableName, string search)

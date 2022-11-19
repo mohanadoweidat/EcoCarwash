@@ -70,7 +70,7 @@
                     </li>
 
                     <li class="nav-item px-2">
-                        <a href="#" class="nav-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/slecotvatt'});return false;">Boka tid</a>
+                        <a href="UserBooking.aspx" class="nav-link">Boka tid</a>
                     </li>
 
 
@@ -81,7 +81,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item" href="subscription.aspx">Se abonnemang</a>
                          <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="https://billing.stripe.com/p/login/test_28o17GgZwf4HdqwbII">Hantera abonnemang</a>
+                       <a class="dropdown-item" href="https://billing.stripe.com/p/login/6oE4jQ5KwezjdYA000">Hantera abonnemang</a>
                      </div>
                   </li>
 
@@ -328,29 +328,12 @@
   <div class="tab">
     <h3><strong>Båttvätt överenskommelse</strong></h3>
       <button runat="server" id="contactUsBoatBtn" class="btn btn-outline-primary btn-sm">Kontakta oss</button> 
-      <%--<table width="20%" cellspacing="2px" style="border-spacing: 10px" align="center">
-          <br />
-          <th>
-              <h2><strong>Typ av tjänst:</strong></h2>
-          </th>
-          <th>
-              <h2><strong>Pris:</strong></h2>
-          </th>
-
-          <tr>
-              <td>
-                  <h5>Båttvätt överenskommelse.</h5>
-              </td>
-              <td>
-                  <button runat="server" id="contactUsBoatBtn" class="btn btn-outline-primary btn-sm">Kontakta oss</button></td>
-          </tr>
-        </table>--%>
   </div>
   </div>
 
       
         <div class="text-center">
-              <a href="#" class="btn btn-primary btn-lg" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/slecotvatt'});return false;">Boka tid</a>
+              <a href="UserBooking.aspx" class="btn btn-primary btn-lg">Boka tid</a>
         </div>
   </center>
 
@@ -363,10 +346,10 @@
          <br />
          <br />
          <br />
-        
+         <br /> <br /> <br />
         
          <!-- Footer -->
-       <footer class="footer-color text-center fixed-bottom">
+       <footer class="footer-color text-center">
             
             <!-- Grid container -->
             <div class="container p-4">
@@ -375,7 +358,10 @@
                 <section class="mb-4">
                      <a class="btn" href="https://www.facebook.com/SLBILTVATTAB"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
                     <a class="btn"  href="https://www.instagram.com/slecotvatt/"><i class="fa fa-instagram fa-2x" style="color:black;" aria-hidden="true"></i></a>
-                </section>
+                <br /> 
+                    <img src="Images/klarna.png" /><img src="Images/Visa.png" /> <img src="Images/mastercard.png" /> &nbsp  <img src="Images/Nets.png" style="width:128px"/>
+                
+                    </section>
                 <!-- Section: Social media -->
                 <!-- Section: Copyright -->
                 <asp:Label CssClass="text-dark copyText" ID="copyRightLbl" runat="server"></asp:Label>

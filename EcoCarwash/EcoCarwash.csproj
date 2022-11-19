@@ -76,7 +76,7 @@
     <Content Include="Css\LoginStyle.css" />
     <Content Include="Css\Style.css" />
     <Content Include="forgotPassword.aspx" />
-    <Content Include="Images\aboutUs.jpg" />
+    <Content Include="Images\aboutUs.JPG" />
     <Content Include="Images\bed.png" />
     <Content Include="Images\bg.jpg" />
     <Content Include="Images\car.png" />
@@ -88,9 +88,13 @@
     <Content Include="Images\favicon\favicon-16x16.png" />
     <Content Include="Images\favicon\favicon-32x32.png" />
     <Content Include="Images\favicon\favicon.ico" />
+    <Content Include="Images\klarna.png" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\mastercard.png" />
+    <Content Include="Images\Nets.png" />
     <Content Include="Images\no-image.png" />
     <Content Include="Images\sofa.png" />
+    <Content Include="Images\Visa.png" />
     <Content Include="index.aspx" />
     <Content Include="Js\AdminJS.js" />
     <Content Include="Js\InfoMessages.js" />
@@ -98,6 +102,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Services.aspx" />
     <Content Include="subscription.aspx" />
+    <Content Include="UserBooking.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -181,9 +186,17 @@
     <Compile Include="subscription.aspx.designer.cs">
       <DependentUpon>subscription.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserBooking.aspx.cs">
+      <DependentUpon>UserBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserBooking.aspx.designer.cs">
+      <DependentUpon>UserBooking.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminMasterPage.Master" />
+    <Content Include="Images\favicon\site.webmanifest" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

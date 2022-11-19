@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="EcoCarwash.index" EnableEventValidation="false" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserBooking.aspx.cs" Inherits="EcoCarwash.UserBooking" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Startsidan</title>
+    <title>Boka en tid</title>
 
      <!-- Required meta tags -->
     <meta charset="utf-8"/>
@@ -14,40 +14,25 @@
     <link rel="apple-touch-icon" sizes="180x180" href="Images/favicon/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon/favicon-16x16.png"/>
-     
 
-
-    <!-- Bootstrap CSS -->
+      <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
-    
+
      <!-- CSS style -->
     <link href="Css/Style.css" rel="stylesheet" />
 
+
      <!--JS-->
     <script src="Js/main.js"></script>
-
-
-     <!-- font-awesome- icons -->
-   <%-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>--%>
+     
+    <!-- font-awesome- icons -->
      <script src="https://kit.fontawesome.com/f729346f3e.js" crossorigin="anonymous"></script>
 
-
-
-    <%--<link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"/>--%>
-
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-
-
-  
 </head>
 <body>
     <form id="form1" runat="server">
-         
-         
-         <!-- Navbar -->
+
+           <!-- Navbar -->
         <nav class="navbar fixed-top navbar-expand-lg  navbar navbar-light" id="navbar">
 
             <center>
@@ -72,24 +57,21 @@
                         <a class="nav-link " href="Services.aspx">Våra tjänster</a>
                     </li>
 
-                    <li class="nav-item px-2">
-                         <a href="UserBooking.aspx" class="nav-link">Boka tid</a>
+                    <li class="nav-item px-2 activeItem">
+                        <a href="UserBooking.aspx" class="nav-link">Boka tid</a>
                     </li>
 
-                     
-
-                    <li class="nav-item dropdown">
+                      <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Abonnemang
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item" href="subscription.aspx">Se abonnemang</a>
                          <div class="dropdown-divider"></div>
-                       <a class="dropdown-item" href="https://billing.stripe.com/p/login/6oE4jQ5KwezjdYA000">Hantera abonnemang</a>
+                      <a class="dropdown-item" href="https://billing.stripe.com/p/login/6oE4jQ5KwezjdYA000">Hantera abonnemang</a>
                      </div>
                   </li>
 
-                      
                     <li class="nav-item px-2">
                         <a class="nav-link" href="aboutUs.aspx">Om oss</a>
                     </li>
@@ -101,224 +83,25 @@
                 </ul>
 
                 <form class="form-inline my-2 my-lg-0">
-                     <div id="buttonsGroup">
-                          
-                    <button runat="server" id="logInBtn" class="btn btn-outline-primary my-2 my-sm-0"   type="button">Logga in</button>
-                    <button runat="server" id="adminPnlBtn" visible="false" class="btn btn-outline-primary my-2 my-sm-0" type="button">Dashboard</button>
-                    </div>
                  </form>
             </div>
         </nav>
- 
-
-
-   
 
 
 
-
-
-          
-           
-         <!--Header content--> 
-         <div class="bg"></div>
-          <div class="centered">
-                  <p id="wlcp">Välkommen till S&L ECO-tvätt</p>
-                 <p id="infop">Biltvätt - sängtvätt - sofftvätt - mattvätt </p>
-             </div>
-         <br />
-
-          <!-- Logo -->
-          <center>
-             <img src="Images/aboutUs.JPG" style="width:400px" />
-              <br />
-              <br />
-              <div id="l" class="bg-primary">
-                   <h1 id="wlcp-homePage">Våra tjänster</h1>
-              </div>
-          </center>
-          <br /> 
-           <!-- Cards -->
-        <center>
-           <div class="container">
-                    
-                     <div class="">     <%--cards--%>
-
-                        <div class="row">
-                          
-                            <div class="col">
-                                <div class="card">
-
-                                    <img class="card-img-top" src="Images/car.png" alt="Card image cap"/>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Biltvätt</h5>
-                                        <p class="card-text">
-                                            Vi kommer till dig och ångtvättar din bil hos dig i hela Skåne och Halland.
-                                         </p>
-                                        <h6 class="card-text" style="font-weight:600">
-                                            Ångtvätt gör att din bil blir ren och bakteriefri, plus att vi kan tvätta de små detaljerna som inte kan tvättas hos andra biltvättar.
-                                         </h6>
-                                        <a href="Services.aspx" class="btn btn-primary" style="margin-top:10px">Läs mer...</a> <%--btn btn-outline-primary--%>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="card">
-                                    <img class="card-img-top" src="Images/bed.png" alt="Card image cap" />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Sängtvätt</h5>
-                                         <p class="card-text">
-                                           Vi kommer till dig och tvättar din säng hos dig i hela Skåne och Halland.
-                                         </p>
-                                        <p class="card-text">
-                                             Vi utför kem/ångtvätt som gör att smuts och fläckar försvinner och gör att sängen blir ren och bakteriefri.
-                                        </p>
-                                        <a href="Services.aspx" class="btn btn-primary">Läs mer...</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="card">
-                                    <img class="card-img-top" src="Images/sofa.png" alt="Card image cap" />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Sofftvätt</h5>
-                                         <p class="card-text">
-                                           Vi kommer till dig och tvättar din soffa hos dig i hela Skåne och Halland.
-                                         </p>
-                                        <p class="card-text">
-                                         Vi utför kem/ångtvätt som gör att smuts och fläckar försvinner och gör att soffan blir ren och bakteriefri.
-                                        </p>
-                                         <a href="Services.aspx" class="btn btn-primary">Läs mer...</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="card">
-                                    <img class="card-img-top" src="Images/carpet.png" alt="Card image cap" />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Mattvätt</h5>
-                                         <p class="card-text">
-                                           Vi kommer till dig och tvättar din matta hos dig i hela Skåne och Halland.
-                                         </p>
-                                        <p class="card-text">
-                                          Vi utför kem/ångtvätt som gör att smuts och fläckar försvinner och gör att mattan blir ren och bakteriefri.
-                                        </p>
-                                         <a href="Services.aspx" class="btn btn-primary">Läs mer...</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-          <br />
-            </center>
-         
-        <!--Step instrutions---->
-         <div class="container-fluid">
-	<div class="row justify-content-center">
-		<div class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
-            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
-                <h2 id="heading">Såhär går det till vid en bokning</h2>
-                <p>Tryck på nästa steg knappen för att se hur man bokar.</p>
-
-                <form id="msform">
-                    <!-- progressbar -->
-                    <ul id="progressbar">
-                        <li class="active" id="service"><strong>Välj en tjänst</strong></li>
-                        <li id="timeBooking"><strong>Välj en ledig tid</strong></li>
-                        <li id="information"><strong>Fyll i dina uppgifter och betala</strong></li>
-                        <li id="confirm"><strong>Klar</strong></li>
-                    </ul>
-                    <div class="progress">
-                    	<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                	</div>
-                    <br>
-                    <!-- fieldsets -->
-                    <fieldset>
-                        <div class="form-card">
-                        	<div class="row">
-                        		<div class="col-7">
-                            		<h2 class="fs-title">Välj en tjänst:</h2>
-                            	</div>
-                            	<div class="col-5">
-                            		<h2 class="steps">Steg 1 - 4</h2>
-                            	</div>
-                            </div>
-                            <p>Välj tjänsten som du önskar att ha.</p>
-                        </div>
-                        <input type="button" name="next" class="next action-button" value="Nästa steg"/>
-                    </fieldset>
-                    <fieldset>
-                        <div class="form-card">
-                            <div class="row">
-                        		<div class="col-7">
-                            		<h2 class="fs-title">Välj en ledig tid:</h2>
-                            	</div>
-                            	<div class="col-5">
-                            		<h2 class="steps">Steg 2 - 4</h2>
-                            	</div>
-                            </div>
-                            <p>Här ser du en kalender som visar tillgängliga tider. Välj en tid som passar dig.</p>
-                        </div>
-                        <input type="button" name="next" class="next action-button" value="Nästa steg"/>
-                        <input type="button" name="previous" class="previous action-button-previous" value="Föregående steg"/>
-                    </fieldset>
-                    <fieldset>
-                        <div class="form-card">
-                            <div class="row">
-                        		<div class="col-7">
-                            		<h2 class="fs-title">Fyll i dina uppgifter:</h2>
-                            	</div>
-                            	<div class="col-5">
-                            		<h2 class="steps">Steg 3 - 4</h2>
-                            	</div>
-                            </div>
-                            <p>Fyll i dina kontaktuppgifter och betala, du kan antigen betala med kort eller klarna. <br />Har du andra funderingar över besöket så skriver du detta.</p>
-                        </div>
-                        <input type="button" name="next" class="next action-button" value="Nästa"/>
-                        <input type="button" name="previous" class="previous action-button-previous" value="Föregående steg"/>
-                    </fieldset>
-                    
-                    <fieldset>
-                        <div class="form-card">
-                        	<div class="row">
-                        		<div class="col-7">
-                            		 
-                            	</div>
-                            	<div class="col-5">
-                            		<h2 class="steps">Steg 4 - 4</h2>
-                            	</div>
-                            </div>
-
-                            <br/><br/>
-                            <h2 class="blue-text text-center"><strong>Klar!</strong></h2>
-                            <br/>
-                            <div class="row justify-content-center">
-                                <div class="col-3">
-                                    <img src="Images/check.png" class="fit-image"/>
-                                </div>
-                            </div>
-                            <br/><br/>
-                            <div class="row justify-content-center">
-                                <div class="col-7 text-center">
-                                    <h5 class="blue-text text-center">Du kommer få en bekräftelse på din bokning.</h5><br />
-                                       
-                                      <a href="UserBooking.aspx" class="btn btn-primary">Boka tid</a>
-                                    </div>
-                            </div>
-                        </div>
-                   </fieldset>
-                </form>
-            </div>
+           <!-- Content -->
+        <div class="bg-aboutUs"></div>
+        <div class="centered-aboutUs">
+            <p id="wlcp-aboutUs">Boka tid</p>
         </div>
-	</div>
-</div>  
-            <br />
-          
+        <br />
+
+
+        <%--Booking frame--%>
+         <script type="text/javascript" src="https://bookeo.com/widget.js?a=42556HY9CL31847C863604"></script>
+
+         
+        <br /><br /><br /><br />
          <!-- Footer -->
         <footer class="footer-color text-center">
             <!-- Grid container -->
@@ -328,9 +111,9 @@
                 <section class="mb-4">
                      <a class="btn" href="https://www.facebook.com/SLBILTVATTAB"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
                      <a class="btn"  href="https://www.instagram.com/slecotvatt/"><i class="fa fa-instagram fa-2x" style="color:black;" aria-hidden="true"></i></a>
-                    <br /> 
+                   <br /> 
                     <img src="Images/klarna.png" /><img src="Images/Visa.png" /> <img src="Images/mastercard.png" /> &nbsp  <img src="Images/Nets.png" style="width:128px"/>
-                </section>
+                    </section>
                 <!-- Section: Social media -->
                 <!-- Section: Copyright -->
                 <asp:Label CssClass="text-dark copyText" ID="copyRightLbl" runat="server"></asp:Label>
@@ -339,96 +122,10 @@
             <!-- Grid container -->
         </footer>
          <!-- Footer -->
- 
-    </form>
-      <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-     
+     </form>
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-      <!-- JavaScript for progress bar -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-
-            var current_fs, next_fs, previous_fs; //fieldsets
-            var opacity;
-            var current = 1;
-            var steps = $("fieldset").length;
-
-            setProgressBar(current);
-
-            $(".next").click(function () {
-
-                current_fs = $(this).parent();
-                next_fs = $(this).parent().next();
-
-                //Add Class Active
-                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-
-                //show the next fieldset
-                next_fs.show();
-                //hide the current fieldset with style
-                current_fs.animate({ opacity: 0 }, {
-                    step: function (now) {
-                        // for making fielset appear animation
-                        opacity = 1 - now;
-
-                        current_fs.css({
-                            'display': 'none',
-                            'position': 'relative'
-                        });
-                        next_fs.css({ 'opacity': opacity });
-                    },
-                    duration: 500
-                });
-                setProgressBar(++current);
-            });
-
-            $(".previous").click(function () {
-
-                current_fs = $(this).parent();
-                previous_fs = $(this).parent().prev();
-
-                //Remove class active
-                $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
-
-                //show the previous fieldset
-                previous_fs.show();
-
-                //hide the current fieldset with style
-                current_fs.animate({ opacity: 0 }, {
-                    step: function (now) {
-                        // for making fielset appear animation
-                        opacity = 1 - now;
-
-                        current_fs.css({
-                            'display': 'none',
-                            'position': 'relative'
-                        });
-                        previous_fs.css({ 'opacity': opacity });
-                    },
-                    duration: 500
-                });
-                setProgressBar(--current);
-            });
-
-            function setProgressBar(curStep) {
-                var percent = parseFloat(100 / steps) * curStep;
-                percent = percent.toFixed();
-                $(".progress-bar")
-                    .css("width", percent + "%")
-            }
-
-            $(".submit").click(function () {
-                return false;
-            })
-
-        });
-    </script>
-
-
 </body>
 </html>

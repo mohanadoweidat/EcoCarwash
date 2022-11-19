@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="forgotPassword.aspx.cs" Inherits="EcoCarwash.forgotPassword" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="forgotPassword.aspx.cs" Inherits="EcoCarwash.forgotPassword" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 
@@ -44,8 +44,9 @@
       <input runat="server" id="resetPassTextBox" type="text" placeholder="Återställningskoden"  required="required"/>
         
       <button runat="server" id="getPwdBtn">Hämta lösenordet</button>
-      <asp:Label ID="admPwd" runat="server"></asp:Label>
-       
+      <asp:Label ID="admPwd" Font-Size="X-Large" runat="server"></asp:Label>
+        <br />
+        <br />
       <button runat="server" visible="false" id="loggaInBtn">Logga in</button>
       <br />
       <br />

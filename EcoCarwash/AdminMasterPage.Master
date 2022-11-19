@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMasterPage.master.cs" Inherits="EcoCarwash.AdminMasterPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMasterPage.master.cs" Inherits="EcoCarwash.AdminMasterPage"%>
 
 <!DOCTYPE html>
 

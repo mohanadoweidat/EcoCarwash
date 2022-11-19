@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="addImage.aspx.cs" Inherits="EcoCarwash.addImage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="addImage.aspx.cs" Inherits="EcoCarwash.addImage" EnableEventValidation="false" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 
@@ -109,7 +109,6 @@
 
                                       <asp:TemplateField HeaderText="Bilden" ItemStyle-HorizontalAlign="Center">
                                          <ItemTemplate>
-                                             
                                              <asp:Image ID="ImageBox" CssClass="egen" Width="100" Height="100" runat="server"/>
                                          </ItemTemplate>
                                      </asp:TemplateField>

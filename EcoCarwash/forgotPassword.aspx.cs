@@ -38,7 +38,7 @@ namespace EcoCarwash
                 {
                     getPwdBtn.Visible = false;
                     loggaInBtn.Visible = true;
-                    admPwd.Text = info.adminPassword;
+                    admPwd.Text = "Ditt lösenord: " +  info.adminPassword;
                 }
                 else
                 {

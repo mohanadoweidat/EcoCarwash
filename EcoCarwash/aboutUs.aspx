@@ -69,7 +69,7 @@
                     </li>
 
                     <li class="nav-item px-2">
-                        <a href="#" class="nav-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/slecotvatt'});return false;">Boka tid</a>
+                         <a href="UserBooking.aspx" class="nav-link">Boka tid</a>
                     </li>
 
                       <li class="nav-item dropdown">
@@ -79,7 +79,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item" href="subscription.aspx">Se abonnemang</a>
                          <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="https://billing.stripe.com/p/login/test_28o17GgZwf4HdqwbII">Hantera abonnemang</a>
+                       <a class="dropdown-item" href="https://billing.stripe.com/p/login/6oE4jQ5KwezjdYA000">Hantera abonnemang</a>
                      </div>
                   </li>
 
@@ -120,17 +120,17 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="section-header text-left">
-                            <p>Om oss</p>
+                            
                             <h2>Snabbt, billigt och miljövänligt</h2>
                         </div>
                         <div class="about-content">
                             <p>
-                                Miljövänlig mobil biltvätt. Vi kör till dig och tvättar din bil var du vill. Vi Ångtvättar bilar, lastbilar, motorcyklar och båtar.    
+                                Miljövänlig mobil tvätt. Vi kör till dig och tvättar din bil/möbler var du vill. 
                             </p>
                             <ul>
                                 <li><i class="far fa-check-circle"></i>Utvändig tvätt</li>
                                 <li><i class="far fa-check-circle"></i>Invändig tvätt</li>
-                                <li><i class="far fa-check-circle"></i>Djuprengöring (säten/insidan)</li>
+                                <li><i class="far fa-check-circle"></i>Klädselrengöring (säten/insidan)</li>
                                 <li><i class="far fa-check-circle"></i>AC-Rengöring</li>
                                 <li><i class="far fa-check-circle"></i>Motortvätt</li>
                                 <li><i class="far fa-check-circle"></i>MC-tvätt</li>
@@ -147,7 +147,7 @@
      <%--  <hr />--%>
            
         <center>
-        <h1>Vårt arbete:</h1>
+        <h1>Galleriet</h1>
              </center>
   
         <!-- Swiper image slider -->
@@ -189,6 +189,8 @@
                 <section class="mb-4">
                      <a class="btn" href="https://www.facebook.com/SLBILTVATTAB"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
                      <a class="btn"  href="https://www.instagram.com/slecotvatt/"><i class="fa fa-instagram fa-2x" style="color:black;" aria-hidden="true"></i></a>
+                     <br /> 
+                    <img src="Images/klarna.png" /><img src="Images/Visa.png" /> <img src="Images/mastercard.png" /> &nbsp  <img src="Images/Nets.png" style="width:128px"/>
                 </section>
                 <!-- Section: Social media -->
                 <!-- Section: Copyright -->

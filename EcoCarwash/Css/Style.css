@@ -3,10 +3,12 @@
 /*******************************/
 
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 * {
-   
     box-sizing: border-box;
-    margin:0;
+    margin: 0;
+    font-family: "Nunito",sans-serif;
 }
 
 
@@ -15,12 +17,7 @@ body, html {
      font-family: "Nunito",sans-serif;
 }
 
-#container {
-    /*background: rgb(167,246,255);
-    background: linear-gradient(90deg, rgba(167,246,255,1) 0%, rgba(162,206,255,0.8071603641456583) 50%, rgba(0,121,255,1) 100%);*/
-}
-
-  
+ 
 hr {
     background-color: #e3f2fd;
     margin:10px;
@@ -45,7 +42,7 @@ hr {
     color: black;
     font-weight: bold;
     padding: 10px;
-    font-family: 'Goldman', cursive;
+    font-family: "Nunito", sans-serif !important;
 }
 
   
@@ -104,6 +101,7 @@ hr {
     background-repeat: no-repeat;
     background-size: cover;
 }
+ 
 
  
 #wlcp{
@@ -135,7 +133,8 @@ hr {
     bottom: 60%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #fff;
+   /* color: #fff;*/
+   color: floralwhite;
     text-shadow: 0 0 5px rgb(0 0 0 / 30%);
     font-family: "Nunito",sans-serif;
     line-height: 30px;
@@ -149,6 +148,15 @@ hr {
     left: 50%;
     bottom: 82%;
     transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.centered-contactUs {
+    top: 14%;
+    left: 50%;
+    bottom: 82%;
     text-align: center;
     line-height: 30px;
     font-weight: bold;
@@ -222,8 +230,8 @@ hr {
     min-height: 100vh;
    
 }
-  
 
+  
 
 /*******************************/
 /********** Index ---> Progress bar CSS **********/
@@ -452,6 +460,9 @@ p{
     .bookingBtn:hover {
         background-color: #1f4abe;
     }
+
+
+
 
 /***************************************************************/
 
@@ -752,16 +763,13 @@ p{
 
 
 
+ 
 
 
 /*******************************/
 /********** Services **********/
 /*******************************/
-
-
 /*Service taps*/
-
-
 .tabs {
     /*  Taps will be at left side*/
     /*  display: -webkit-box;
@@ -896,6 +904,29 @@ p{
         .serviceTable {
             width: 50%;
         }
+
+
+        .contactInfoLbl{
+            font-size:large !important;
+             
+        }
+
+        .contactInfoCall {
+            font-size: smaller !important;
+            font-weight:800 !important;
+        }
+
+
+        .contactInfoValueMail {
+            font-size: smaller !important;
+        }
+
+        .contactInfoValueNumber {
+            font-size: 10px !important;
+        }
+
+         
+         
     }
 
 
@@ -965,6 +996,20 @@ p{
         .serviceTable {
             width: 100%;
         }
+
+
+        .contactFooter{
+             height:15%;
+        }
+
+        .contactButton{
+            margin-bottom:20%;
+            
+        }
+
+         
+
+         
     }
  
 

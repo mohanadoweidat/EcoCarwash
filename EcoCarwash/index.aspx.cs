@@ -14,9 +14,9 @@ namespace EcoCarwash
             string date = DateTime.Now.Year.ToString();
              
             copyRightLbl.Text = "© " + date + " Alla rättigheter förbehållna | S&L ECO-tvätt AB";
-             
+
             logInBtn.ServerClick += LogInBtn_ServerClick;
-            
+
             adminPnlBtn.ServerClick += AdminPnlBtn_ServerClick;
 
             if (!IsPostBack)
@@ -25,22 +25,24 @@ namespace EcoCarwash
                 {
                     logInBtn.Visible = false;
                     adminPnlBtn.Visible = true;
-                 }
+                }
                 else
                 {
-                  logInBtn.Visible = true;
-                  adminPnlBtn.Visible = false;
+                    logInBtn.Visible = true;
+                    adminPnlBtn.Visible = false;
                 }
             }
-            
+
         }
+
+
 
         private void AdminPnlBtn_ServerClick(object sender, EventArgs e)
         {
             Response.Redirect("addService.aspx");
         }
 
-         
+
 
         private void LogInBtn_ServerClick(object sender, EventArgs e)
         {

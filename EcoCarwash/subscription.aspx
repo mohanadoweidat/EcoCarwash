@@ -34,9 +34,7 @@
      <script src="https://kit.fontawesome.com/f729346f3e.js" crossorigin="anonymous"></script>
 
 
-     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-
+       
 
     <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
      
@@ -71,7 +69,7 @@
                     </li>
 
                     <li class="nav-item px-2">
-                          <a href="#" class="nav-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/slecotvatt'});return false;">Boka tid</a>
+                            <a href="UserBooking.aspx" class="nav-link">Boka tid</a>
                     </li>
 
                     <li class="nav-item dropdown activeItem">
@@ -81,7 +79,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item" href="subscription.aspx">Se abonnemang</a>
                          <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="https://billing.stripe.com/p/login/test_28o17GgZwf4HdqwbII">Hantera abonnemang</a>
+                       <a class="dropdown-item" href="https://billing.stripe.com/p/login/6oE4jQ5KwezjdYA000">Hantera abonnemang</a>
                      </div>
                   </li>
 
@@ -113,26 +111,24 @@
          
 
         <div class="text-center">
-             <h2>Du kan abonnera på en av abonemangen nedan:</h2>
+             <h2>Du kan abonnera på en av abonnemangen nedan:</h2>
         </div>
            
-             
-         
- 
-        <stripe-pricing-table pricing-table-id="prctbl_1LuiyNIpBBGsl2gODCb5hBCx"
+                  
+<%-- Test sub--%>
+       <%-- <stripe-pricing-table pricing-table-id="prctbl_1LuiyNIpBBGsl2gODCb5hBCx"
             publishable-key="pk_test_51LuKgeIpBBGsl2gOJvS2wcF0NKB8S5CBisTQwptOftsZ1Qm9dsY5xOPZ8wz8y2u5I38kVkcMzp4rrtYiZfAqryHs00dwyQLWFf">
-        </stripe-pricing-table>
-           
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        </stripe-pricing-table>--%>
 
- 
+
+        
+<stripe-pricing-table pricing-table-id="prctbl_1LzhnrIpBBGsl2gO52kkIK3u"
+publishable-key="pk_live_51LuKgeIpBBGsl2gOCCvvSssaAeHorEgWmkH8joZxWx8ysijujQBKikBhPOFvHVOkquMbsdB0NzRFnNRmOEktd6DF005kAixyCx">
+</stripe-pricing-table>
+
+            
         <!-- Footer -->
-        <footer class="footer-color text-center fixed-bottom">
+        <footer class="footer-color text-center">
             <!-- Grid container -->
             <div class="container p-4">
 
@@ -140,7 +136,10 @@
                 <section class="mb-4">
                      <a class="btn" href="https://www.facebook.com/SLBILTVATTAB"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
                      <a class="btn"  href="https://www.instagram.com/slecotvatt/"><i class="fa fa-instagram fa-2x" style="color:black;" aria-hidden="true"></i></a>
-                </section>
+                   <br /> 
+                    <img src="Images/klarna.png" /><img src="Images/Visa.png" /> <img src="Images/mastercard.png" /> &nbsp  <img src="Images/Nets.png" style="width:128px"/>
+                
+                    </section>
                 <!-- Section: Social media -->
                 <!-- Section: Copyright -->
                 <asp:Label CssClass="text-dark copyText" ID="copyRightLbl" runat="server"></asp:Label>

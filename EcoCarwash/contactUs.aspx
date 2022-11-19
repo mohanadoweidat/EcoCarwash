@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="contactUs.aspx.cs" Inherits="EcoCarwash.contactUs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="contactUs.aspx.cs" Inherits="EcoCarwash.contactUs" EnableEventValidation="true" %>
 
 <!DOCTYPE html>
 
@@ -17,8 +17,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon/favicon-16x16.png"/>
 
     <!-- Bootstrap CSS -->
-   <%-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>--%>
-      
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 
      <!-- CSS style -->
@@ -33,16 +31,14 @@
     <script src="Js/InfoMessages.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+     
     
 
 </head>
 <body>
     <form id="form1" runat="server">
-        
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-
+         
 
              <!-- Navbar -->
         <nav class="navbar fixed-top navbar-expand-lg  navbar navbar-light" id="navbar">
@@ -70,7 +66,7 @@
                     </li>
                      
                     <li class="nav-item px-2">
-                        <a href="#" class="nav-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/slecotvatt'});return false;">Boka tid</a>
+                         <a href="UserBooking.aspx" class="nav-link">Boka tid</a>
                     </li>
 
 
@@ -81,7 +77,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item" href="subscription.aspx">Se abonnemang</a>
                          <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="https://billing.stripe.com/p/login/test_28o17GgZwf4HdqwbII">Hantera abonnemang</a>
+                       <a class="dropdown-item" href="https://billing.stripe.com/p/login/6oE4jQ5KwezjdYA000">Hantera abonnemang</a>
                      </div>
                   </li>
 
@@ -95,40 +91,52 @@
                     </li>
                      
                 </ul>
-
-                <form class="form-inline my-2 my-lg-0">
-                    
-                 </form>
-            </div>
+             </div>
         </nav>
-
+            
+         
+     
+        
+        
+        
+           
+       
+           
           <!-- Content -->
-         <div class="bg-aboutUs"></div>
-         <div class="centered-aboutUs">
-               <p id="wlcp-aboutUs">Kontakta oss</p>
-          </div>
+         <div class="bg-aboutUs">
+             <br /> 
+             <br />
+             <br />
+             <br />
+             <br />
+             <h1 class="centered-contactUs">Kontakta oss</h1>
+               <br />
         <br />
-
+          </div>
+          
+       
+         
+      
 
 
            <!-- Contact Start -->
         <div class="contact">
             <div class="container">
                 <div class="section-header text-center">
-                    <p>KOMMA I KONTAKT</p>
+                    
                     <h2>Har du några funderingar?</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="contact-info ">
-                            <h2>kontaktinformation</h2>
+                            <h2 class="contactInfoLbl">kontaktinformation</h2>
                             <div class="contact-info-item">
                                 <div class="contact-info-icon">
                                     <i class="far fa-clock"></i>
                                 </div>
                                 <div class="contact-info-text">
-                                    <h3>Öppettider</h3>
-                                    <p>Mån - Fre, 24/7</p>
+                                    <h3>Telefontider</h3>
+                                    <p>Mån - Fre, 9:00-18:00</p>
                                 </div>
                             </div>
                             <div class="contact-info-item">
@@ -136,8 +144,8 @@
                                     <i class="fa fa-phone-alt"></i>
                                 </div>
                                 <div class="contact-info-text">
-                                    <h3>Ringa oss</h3>
-                                    <p>+46 760-06 76 59</p>
+                                    <h3 class="contactInfoCall">Ringa oss</h3>
+                                    <p class="contactInfoValueNumber">+46 760-06 76 59</p>
                                 </div>
                             </div>
                             <div class="contact-info-item">
@@ -146,64 +154,60 @@
                                 </div>
                                 <div class="contact-info-text">
                                     <h3>Maila oss</h3>
-                                    <p>slcontact@slbiltvatt.se</p>
+                                    <p class="contactInfoValueMail">support@slecotvatt.se</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-7">
+         <!-- Contact End -->
+                <div class="col-md-7">
                         <div class="contact-form">
                             <div id="success"></div>
-                            
-
-                                <div class="control-group">
+                                 <div class="control-group">
                                   <i class="fa-solid fa-edit icon"></i>
-                                    <input type="text" runat="server" class="form-control" id="subject" placeholder="Ämne" required="required" data-validation-required-message="Vänligen ange ett ämne" />
+                                    <input type="text" runat="server" class="form-control" id="subject" placeholder="Ämne"/>
                                     <p class="help-block text-danger"></p>
                                 </div>
 
                                 <div class="control-group">
                                     <i class="fa fa-user icon"></i>
-                                    <input type="text" runat="server" class="form-control" id="name" placeholder="Ditt namn" required="required" data-validation-required-message="Vänligen ange ditt namn" />
+                                    <input type="text" runat="server" class="form-control" id="name" placeholder="Ditt namn"/>
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 
                                 <div class="control-group">
                                     <i class="fa-solid fa-envelope icon"></i>
-                                    <input type="email" runat="server" class="form-control" id="email" placeholder="Din e-post" required="required" data-validation-required-message="Vänligen ange din e-post" />
+                                    <input type="email" runat="server" class="form-control" id="email" placeholder="Din e-post"/>
                                     <p class="help-block text-danger"></p>
+                                    
                                 </div>
                                 <div class="control-group">
                                      <i class="fa-solid fa-phone icon"></i>
-                                    <input type="text" runat="server" class="form-control" id="telefon" placeholder="Telefonnummer" required="required" data-validation-required-message="Vänligen ange ditt telefonnummer" />
+                                    <input type="text" runat="server" class="form-control" id="telefon" placeholder="Telefonnummer"/>
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
                                     <i class="fa-solid fa-message icon"></i>
-                                    <textarea class="form-control" runat="server" id="message" placeholder="Meddelandet" required="required" style="resize:none"  data-validation-required-message="Vänligen ange ditt meddelande/fråga"></textarea>
+                                    <textarea class="form-control" runat="server" id="message" placeholder="Meddelandet" style="resize:none"></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div>
                                     <%--btn btn-primary--%>
-                                    <button class="btn btn-outline-primary btn-lg" runat="server" type="submit" id="sendMessageButton">Skicka meddelandet</button>
+                                    <button class="btn btn-outline-primary btn-lg contactButton" runat="server" id="sendMessageButton">Skicka meddelandet</button>
+                                     <asp:Label ID="errMailLbl" runat="server"></asp:Label>
                                 </div>
-                             
-                        </div>
-                    </div>
-
-                    <!-- Map section -->
-                    <div class="col-md-12">
-                       <%-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1111.6698453266781!2d13.127102984683528!3d56.1339382511533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653d9f8b7ad6dcf%3A0x9ffe8b8cc0521e62!2sTr%C3%A4dg%C3%A5rdsgatan%202C%2C%20264%2038%20Klippan!5e0!3m2!1ssv!2sse!4v1645463500090!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>--%>
+                         </div>
                     </div>
                 </div>
             </div>
         </div>
-         <!-- Contact End -->
          
 
-         
+         <br />
+          <br />
+
            <!-- Footer -->
-        <footer class="footer-color text-center">
+        <footer class="footer-color text-center contactFooter">
             <!-- Grid container -->
             <div class="container p-4">
 
@@ -211,7 +215,9 @@
                 <section class="mb-4">
                      <a class="btn" href="https://www.facebook.com/SLBILTVATTAB"><i class="fa fa-facebook-official fa-2x" style="color:royalblue;"  aria-hidden="true"></i></a>
                      <a class="btn"  href="https://www.instagram.com/slecotvatt/"><i class="fa fa-instagram fa-2x" style="color:black;" aria-hidden="true"></i></a>
-                </section>
+                 <br /> 
+                    <img src="Images/klarna.png" /><img src="Images/Visa.png" /> <img src="Images/mastercard.png" /> &nbsp  <img src="Images/Nets.png" style="width:128px"/>
+                '</section>
                 <!-- Section: Social media -->
                 <!-- Section: Copyright -->
                 <asp:Label CssClass="text-dark copyText" ID="copyRightLbl" runat="server"></asp:Label>

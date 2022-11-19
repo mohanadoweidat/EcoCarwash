@@ -23,9 +23,7 @@ function WrongUsernamePass() {
     })
 }
 
-
-
- 
+  
 function sendMessage() {
     Swal.fire(
         'Tack så mycket!',

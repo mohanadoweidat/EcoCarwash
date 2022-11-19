@@ -6,6 +6,7 @@ using System.Data.Common;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -80,6 +81,7 @@ namespace EcoCarwash
                     con.Open();
                     cmd.ExecuteNonQuery();
                     InfoLbl.Text = "Bilden har lagts till!";
+                     
                     BindGrid();
                 }
              }
@@ -100,12 +102,6 @@ namespace EcoCarwash
             SqlDataReader rd = cmd.ExecuteReader();
             ImgGrid.DataSource = rd;
             ImgGrid.DataBind();
-
-
-             
-
-             
-
             con.Close();
 
         }
